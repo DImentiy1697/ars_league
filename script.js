@@ -209,30 +209,5 @@ window.addEventListener("scroll", () => {
 
 });
 
-const header = document.querySelector(".main-header");
-
-window.addEventListener("scroll", () => {
-
-    if (!header) return;
-
-    if (window.scrollY > 40) {
-
-        header.style.background =
-            "rgba(7, 5, 9, 0.94)";
-
-        header.style.boxShadow =
-            "0 12px 35px rgba(0, 0, 0, 0.28)";
-
-    } else {
-
-        header.style.background =
-            "rgba(7, 5, 9, 0.78)";
-
-        header.style.boxShadow =
-            "none";
-
-    }
-
-});
 
 updateActiveLink();
