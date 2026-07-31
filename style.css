@@ -1495,3 +1495,20 @@ border-bottom: 0;
         width: 100%;
 
         justify-content: center;
+        /* FIX HEADER ON MOBILE */
+
+@media (max-width: 768px) {
+
+    .main-header {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+}
