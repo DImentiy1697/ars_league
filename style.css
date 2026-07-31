@@ -1495,20 +1495,24 @@ border-bottom: 0;
         width: 100%;
 
         justify-content: center;
-        /* FIX HEADER ON MOBILE */
+      
+        /* MOBILE HEADER — FINAL FIX */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
+    header.main-header,
     .main-header {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: 100%;
-        min-height: auto;
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        min-height: auto !important;
+        transform: none !important;
     }
 
     .hero {
-        padding-top: 60px;
+        padding-top: 50px !important;
     }
-
 }
