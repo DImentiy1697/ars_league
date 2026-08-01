@@ -1,4 +1,3 @@
-
 window.ARS_DATA = {
     league: {
         name: "ARS LEAGUE",
