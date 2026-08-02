@@ -107,13 +107,13 @@ window.ARS_DATA = {
                 team2: { username: "@WondySale", club: "RC Lens" },
 
                 firstLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 1,
+                    score2: 4
                 },
 
                 secondLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 0,
+                    score2: 2
                 },
 
                 penaltyWinner: ""
