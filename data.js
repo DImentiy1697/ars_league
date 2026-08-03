@@ -161,13 +161,13 @@ window.ARS_DATA = {
                 code: "SF 01",
 
                 firstLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 3,
+                    score2: 2
                 },
 
                 secondLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 3,
+                    score2: 1
                 },
 
                 penaltyWinner: ""
@@ -177,13 +177,13 @@ window.ARS_DATA = {
                 code: "SF 02",
 
                 firstLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 3,
+                    score2: 0
                 },
 
                 secondLeg: {
-                    score1: null,
-                    score2: null
+                    score1: 3,
+                    score2: 0
                 },
 
                 penaltyWinner: ""
