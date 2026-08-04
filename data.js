@@ -194,8 +194,8 @@ window.ARS_DATA = {
             code: "GRAND FINAL",
 
             match: {
-                score1: null,
-                score2: null
+                score1: 5,
+                score2: 2
             },
 
             penaltyWinner: ""
