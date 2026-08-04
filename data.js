@@ -224,7 +224,7 @@ window.ARS_DATA = {
             icon: "◈",
             tournament: "Династія",
             subtitle: "ARS LEAGUE Special Format",
-            champion: "Визначається",
+            champion: "Brentford",
             season: "Season 2"
         }
     ],
@@ -246,7 +246,7 @@ window.ARS_DATA = {
             icon: "◈",
             season: "SEASON 02",
             name: "Династія",
-            description: "Новий чемпіон буде визначений у поточному плей-оф."
+            description: "Brentford"
         }
     ]
 };
