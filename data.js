@@ -27,16 +27,16 @@ window.ARS_DATA = {
         participantsAtStart: 16,
         playoffPlayers: 8,
         quarterfinals: 4,
-        stage: "1/4 фіналу",
-        stageBadge: "1/4 ФІНАЛУ",
+        stage: "ЗАВЕРШЕНО",
+        stageBadge: "ЗАВЕРШЕНО",
         deadline: "02.08 | 17:00",
         progressLabel: "Плей-оф",
         progressPercent: 58,
-        title: "Турнір офіційно у плей-оф",
+        title: "ТУРНІР ЗАВЕРШЕНО",
         description:
             "Груповий етап завершено. Вісім найкращих учасників продовжують боротьбу у чвертьфіналі.",
         sidebarDescription:
-            "Турнір наблизився до вирішальної частини. Попереду чвертьфінали, півфінали та фінал."
+            ""Чемпіон визначений. Дякуємо всім учасникам. Очікуйте анонс нового турніру"
     },
 
     participants: [
