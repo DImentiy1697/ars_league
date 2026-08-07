@@ -28,78 +28,76 @@ window.ARS_DATA = {
         progressPercent: 0
     },
 
-    /participants: [
-    { username: "@dimentiy19", club: "Реал Мадрид" },
-    { username: "@Mbappe_501", club: "ПСЖ" },
-    { username: "@MehrabyanRaffi", club: "Барселона" },
-    { username: "@Vetal6h", club: "Милан" },
-    { username: "@kentyxa26", club: "МЮ" },
-    { username: "@Viteaqa", club: "Арсенал" },
-    { username: "@Limbo_66", club: "Реал Мадрид 2" },
-    { username: "@FCSMilovereal", club: "ПСЖ 2" },
-    { username: "@WondySale", club: "Манчестер Сити" },
-    { username: "@asvlss", club: "Манчестер Сити 2" },
-    { username: "@spakserega4", club: "Барселона 2" },
-    { username: "@terehjuve", club: "Ювентус" },
-    { username: "@shapus2", club: "Ювентус 2" },
-    { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
-    { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
-    { username: "@No_Name_KZ08", club: "Бавария" },
-    { username: "@Andfoza", club: "Ливерпуль" },
-    { username: "@Yeuwubs", club: "Базель" },
-    { username: "@Oraxan", club: "Ливерпуль 2" },
-    { username: "@tsavaaaa", club: "Атлетико Мадрид" },
-    { username: "@V_llaa_d", club: "Лилль" },
-    { username: "@finallygetaway", club: "Интер" },
-    { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
-    { username: "@destrooooo12", club: "Бавария 2" }
-],*
-
-
-    /*
- groups: {
-    A: [
-        { username: "@shapus2", club: "Ювентус 2" },
-        { username: "@FCSMilovereal", club: "ПСЖ 2" },
-        { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
-        { username: "@V_llaa_d", club: "Лилль" }
-    ],
-
-    B: [
+    participants: [
+        { username: "@dimentiy19", club: "Реал Мадрид" },
         { username: "@Mbappe_501", club: "ПСЖ" },
-        { username: "@Limbo_66", club: "Реал Мадрид 2" },
-        { username: "@Oraxan", club: "Ливерпуль 2" },
-        { username: "@spakserega4", club: "Барселона 2" }
-    ],
-
-    C: [
-        { username: "@WondySale", club: "Манчестер Сити" },
-        { username: "@destrooooo12", club: "Бавария 2" },
-        { username: "@kentyxa26", club: "МЮ" },
-        { username: "@terehjuve", club: "Ювентус" }
-    ],
-
-    D: [
-        { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
         { username: "@MehrabyanRaffi", club: "Барселона" },
+        { username: "@Vetal6h", club: "Милан" },
+        { username: "@kentyxa26", club: "МЮ" },
+        { username: "@Viteaqa", club: "Арсенал" },
+        { username: "@Limbo_66", club: "Реал Мадрид 2" },
+        { username: "@FCSMilovereal", club: "ПСЖ 2" },
+        { username: "@WondySale", club: "Манчестер Сити" },
+        { username: "@asvlss", club: "Манчестер Сити 2" },
+        { username: "@spakserega4", club: "Барселона 2" },
+        { username: "@terehjuve", club: "Ювентус" },
+        { username: "@shapus2", club: "Ювентус 2" },
+        { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
+        { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
+        { username: "@No_Name_KZ08", club: "Бавария" },
+        { username: "@Andfoza", club: "Ливерпуль" },
+        { username: "@Yeuwubs", club: "Базель" },
+        { username: "@Oraxan", club: "Ливерпуль 2" },
         { username: "@tsavaaaa", club: "Атлетико Мадрид" },
-        { username: "@No_Name_KZ08", club: "Бавария" }
-    ],
-
-    E: [
+        { username: "@V_llaa_d", club: "Лилль" },
         { username: "@finallygetaway", club: "Интер" },
         { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
-        { username: "@Yeuwubs", club: "Базель" },
-        { username: "@Viteaqa", club: "Арсенал" }
+        { username: "@destrooooo12", club: "Бавария 2" }
     ],
 
-    F: [
-        { username: "@asvlss", club: "Манчестер Сити 2" },
-        { username: "@Andfoza", club: "Ливерпуль" },
-        { username: "@dimentiy19", club: "Реал Мадрид" },
-        { username: "@Vetal6h", club: "Милан" }
-    ]
-},
+    groups: {
+        A: [
+            { username: "@shapus2", club: "Ювентус 2" },
+            { username: "@FCSMilovereal", club: "ПСЖ 2" },
+            { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
+            { username: "@V_llaa_d", club: "Лилль" }
+        ],
+
+        B: [
+            { username: "@Mbappe_501", club: "ПСЖ" },
+            { username: "@Limbo_66", club: "Реал Мадрид 2" },
+            { username: "@Oraxan", club: "Ливерпуль 2" },
+            { username: "@spakserega4", club: "Барселона 2" }
+        ],
+
+        C: [
+            { username: "@WondySale", club: "Манчестер Сити" },
+            { username: "@destrooooo12", club: "Бавария 2" },
+            { username: "@kentyxa26", club: "МЮ" },
+            { username: "@terehjuve", club: "Ювентус" }
+        ],
+
+        D: [
+            { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
+            { username: "@MehrabyanRaffi", club: "Барселона" },
+            { username: "@tsavaaaa", club: "Атлетико Мадрид" },
+            { username: "@No_Name_KZ08", club: "Бавария" }
+        ],
+
+        E: [
+            { username: "@finallygetaway", club: "Интер" },
+            { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
+            { username: "@Yeuwubs", club: "Базель" },
+            { username: "@Viteaqa", club: "Арсенал" }
+        ],
+
+        F: [
+            { username: "@asvlss", club: "Манчестер Сити 2" },
+            { username: "@Andfoza", club: "Ливерпуль" },
+            { username: "@dimentiy19", club: "Реал Мадрид" },
+            { username: "@Vetal6h", club: "Милан" }
+        ]
+    },
 
     history: [
         {
@@ -109,46 +107,3 @@ window.ARS_DATA = {
             subtitle: "UEFA Champions League",
             champion: "Newcastle United",
             season: "Season 1"
-        },
-        {
-            icon: "●",
-            tournament: "Чемпіонат світу",
-            tournamentRu: "Чемпионат мира",
-            subtitle: "FIFA World Cup",
-            champion: "France",
-            season: "Season 1"
-        },
-        {
-            icon: "◈",
-            tournament: "Династія",
-            tournamentRu: "Династия",
-            subtitle: "ARS LEAGUE Special Format",
-            champion: "Brentford",
-            season: "Season 2"
-        }
-    ],
-
-    champions: [
-        {
-            icon: "🏆",
-            season: "SEASON 01",
-            name: "Newcastle United",
-            descriptionUk: "Чемпіон турніру UEFA Champions League.",
-            descriptionRu: "Чемпион турнира UEFA Champions League."
-        },
-        {
-            icon: "🏆",
-            season: "SEASON 01",
-            name: "France",
-            descriptionUk: "Чемпіон турніру FIFA World Cup.",
-            descriptionRu: "Чемпион турнира FIFA World Cup."
-        },
-        {
-            icon: "🏆",
-            season: "SEASON 02",
-            name: "Brentford",
-            descriptionUk: "Чемпіон турніру «Династія».",
-            descriptionRu: "Чемпион турнира «Династия»."
-        }
-    ]
-};
