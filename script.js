@@ -138,22 +138,54 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderGroups() {
         const container = $(".groups-grid");
         if (!container) return;
+
+        const playerByUser = Object.fromEntries(data.participants.map((p) => [p.username, p]));
         const letters = Object.keys(data.groups);
+
         container.innerHTML = letters.map((letter) => {
             const teams = data.groups[letter] || [];
-            const rows = Array.from({ length: data.tournament.teamsPerGroup }, (_, index) => {
-                const team = teams[index];
-                if (team) {
-                    return `<div class="group-team"><span>${index + 1}</span><div><strong>${escapeHTML(team.club)}</strong><small>${escapeHTML(team.username)}</small></div></div>`;
-                }
-                return `<div class="group-team group-team-empty"><span>${index + 1}</span><div><strong>${t("vacantSlot")}</strong><small>${t("waitingDraw")}</small></div></div>`;
+            const matches = (data.matches && data.matches[letter]) || [];
+            const table = Object.fromEntries(teams.map((team) => [team.username, {
+                ...team, p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0
+            }]));
+
+            matches.forEach((match) => {
+                if (!Number.isFinite(match.homeScore) || !Number.isFinite(match.awayScore)) return;
+                const home = table[match.home];
+                const away = table[match.away];
+                if (!home || !away) return;
+                home.p++; away.p++;
+                home.gf += match.homeScore; home.ga += match.awayScore;
+                away.gf += match.awayScore; away.ga += match.homeScore;
+                if (match.homeScore > match.awayScore) { home.w++; away.l++; home.pts += 3; }
+                else if (match.homeScore < match.awayScore) { away.w++; home.l++; away.pts += 3; }
+                else { home.d++; away.d++; home.pts++; away.pts++; }
+            });
+
+            const standings = Object.values(table).map((x) => ({ ...x, gd: x.gf - x.ga }))
+                .sort((a,b) => b.pts-a.pts || b.gd-a.gd || b.gf-a.gf || a.club.localeCompare(b.club));
+
+            const tableRows = standings.map((team,index) => `
+                <div class="standing-row">
+                    <span>${index+1}</span><strong>${escapeHTML(team.club)}</strong>
+                    <span>${team.p}</span><span>${team.w}</span><span>${team.d}</span><span>${team.l}</span>
+                    <span>${team.gf}:${team.ga}</span><b>${team.pts}</b>
+                </div>`).join("");
+
+            const matchRows = matches.map((match) => {
+                const home = playerByUser[match.home] || { club: match.home };
+                const away = playerByUser[match.away] || { club: match.away };
+                const played = Number.isFinite(match.homeScore) && Number.isFinite(match.awayScore);
+                return `<div class="group-match"><span>${escapeHTML(home.club)}</span><strong>${played ? `${match.homeScore} : ${match.awayScore}` : '— : —'}</strong><span>${escapeHTML(away.club)}</span></div>`;
             }).join("");
-            return `
-                <article class="group-card">
-                    <div class="group-card-head"><span>${t("group")}</span><strong>${escapeHTML(letter)}</strong></div>
-                    <div class="group-teams">${rows}</div>
-                </article>
-            `;
+
+            return `<article class="group-card group-card-full">
+                <div class="group-card-head"><span>${t("group")}</span><strong>${escapeHTML(letter)}</strong></div>
+                <div class="standing-head"><span>#</span><strong>КОМАНДА</strong><span>І</span><span>В</span><span>Н</span><span>П</span><span>Г</span><b>О</b></div>
+                <div class="standing-body">${tableRows}</div>
+                <div class="group-matches-title">МАТЧІ</div>
+                <div class="group-matches">${matchRows}</div>
+            </article>`;
         }).join("");
     }
 

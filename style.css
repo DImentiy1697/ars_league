@@ -2348,3 +2348,6 @@ footer {
         gap: 8px;
     }
 }
+
+/* ARS Champions League: standings + editable results */
+.group-card-full{overflow:hidden}.standing-head,.standing-row{display:grid;grid-template-columns:28px minmax(120px,1fr) repeat(4,28px) 52px 30px;gap:5px;align-items:center}.standing-head{padding:10px 14px;color:var(--muted);font-size:10px;border-bottom:1px solid rgba(255,255,255,.08)}.standing-row{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,.055);font-size:12px}.standing-row strong{font-size:12px;color:var(--white);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.standing-row span,.standing-row b{text-align:center}.standing-row b{color:var(--purple-light)}.group-matches-title{padding:15px 14px 8px;color:var(--purple-light);font-size:10px;font-weight:800;letter-spacing:1.3px}.group-match{display:grid;grid-template-columns:1fr 58px 1fr;align-items:center;gap:8px;padding:8px 14px;font-size:11px}.group-match span:last-child{text-align:right}.group-match strong{text-align:center;color:var(--white);font-family:"Orbitron",sans-serif}.groups-grid{align-items:start}@media(max-width:650px){.standing-head,.standing-row{grid-template-columns:22px minmax(95px,1fr) repeat(4,24px) 44px 26px;gap:2px;padding-left:10px;padding-right:10px}.group-match{padding-left:10px;padding-right:10px}}
