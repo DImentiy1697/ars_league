@@ -1,63 +1,38 @@
 <!DOCTYPE html>
 <html lang="uk">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>ARS LEAGUE — Official eFootball League</title>
-
-    <meta
-        name="description"
-        content="ARS LEAGUE — професійна eFootball-ліга з унікальними турнірами, плей-оф та історією чемпіонів."
-    >
-
+    <meta name="description" content="ARS LEAGUE — офіційна eFootball-ліга, турніри, групи, результати та історія чемпіонів.">
     <meta name="theme-color" content="#070509">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
     <div class="progress-bar"></div>
-
     <div class="page-noise"></div>
-
     <div class="background-glow purple"></div>
     <div class="background-glow red"></div>
 
     <header class="main-header">
-
         <a href="#home" class="logo" aria-label="ARS LEAGUE — головна">
-
-            <img
-                src="images/logo.jpg"
-                alt="Логотип ARS LEAGUE"
-                class="site-logo"
-            >
-
+            <img src="images/logo.jpg" alt="ARS LEAGUE" class="site-logo">
             <div class="logo-text">
                 <h1>ARS <span>LEAGUE</span></h1>
                 <p>Official eFootball League</p>
             </div>
-
         </a>
 
         <nav aria-label="Основна навігація">
-            <a href="#home">Головна</a>
-            <a href="#tournament">Турнір</a>
-            <a href="#results">Результати</a>
-            <a href="#playoffs">Плей-оф</a>
-            <a href="#about">Про лігу</a>
-            <a href="#champions">Чемпіони</a>
+            <a href="#home" data-i18n="navHome">Головна</a>
+            <a href="#tournament" data-i18n="navTournament">Турнір</a>
+            <a href="#groups" data-i18n="navGroups">Групи</a>
+            <a href="#history" data-i18n="navHistory">Історія</a>
+            <a href="#about" data-i18n="navAbout">Про лігу</a>
+            <a href="#champions" data-i18n="navChampions">Чемпіони</a>
         </nav>
 
         <div class="language-switcher" aria-label="Вибір мови / Выбор языка">
@@ -66,1253 +41,188 @@
             <button type="button" class="language-btn" data-lang="ru" aria-pressed="false">RU</button>
         </div>
 
-        <a
-            href="https://t.me/arslegue"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="header-btn"
-        >
-            Telegram
-        </a>
-
+        <a href="https://t.me/arslegue" target="_blank" rel="noopener noreferrer" class="header-btn">Telegram</a>
     </header>
 
     <main>
-
         <section class="hero" id="home">
-
             <div class="hero-grid"></div>
-
             <div class="hero-light hero-light-left"></div>
             <div class="hero-light hero-light-right"></div>
 
             <div class="container hero-container">
-
                 <div class="hero-content">
-
-                    <div class="hero-tag">
-                        <span class="hero-dot"></span>
-                        OFFICIAL EFOOTBALL LEAGUE
-                    </div>
-
-                    <p class="hero-top-title">
-                        THE NEW ERA BEGINS
-                    </p>
-
-                    <h1>
-                        PLAY.
-                        <span>COMPETE.</span>
-                        BECOME A LEGEND.
-                    </h1>
-
-                    <p class="hero-description">
-                        ARS LEAGUE — це місце, де кожен сезон стає новою історією,
-                        а кожен матч має значення.
-                    </p>
+                    <div class="hero-tag"><span class="hero-dot"></span><span class="hero-badge-text">OFFICIAL EFOOTBALL LEAGUE</span></div>
+                    <p class="hero-top-title">THE NEW ERA BEGINS</p>
+                    <h1 class="hero-main-title">PLAY.<span>COMPETE.</span>BECOME A LEGEND.</h1>
+                    <p class="hero-description" data-i18n="heroDescription">ARS LEAGUE — це місце, де кожен сезон стає новою історією, а кожен матч має значення.</p>
 
                     <div class="hero-buttons">
-
-                        <a
-                            href="https://t.me/arsturnirs"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn"
-                        >
-                            Приєднатись
-                        </a>
-
-                        <a href="#tournament" class="btn secondary">
-                            Актуальний турнір
-                        </a>
-
+                        <a href="https://t.me/arsturnirs" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="join">Приєднатись</a>
+                        <a href="#tournament" class="btn secondary" data-i18n="currentTournament">Актуальний турнір</a>
                     </div>
 
                     <div class="hero-stats">
-
                         <div class="stat-card">
-                            <span>Поточний турнір</span>
-                            <h3>01</h3>
-                            <p>«Династія»</p>
+                            <span data-i18n="currentTournamentLabel">Поточний турнір</span>
+                            <h3 class="stat-tournament-code">ACL</h3>
+                            <p class="stat-tournament-name">ARS CHAMPIONS LEAGUE</p>
                         </div>
-
                         <div class="stat-card">
-                            <span>Учасників</span>
-                            <h3>16</h3>
-                            <p>На старті турніру</p>
+                            <span data-i18n="registrationLabel">Реєстрація</span>
+                            <h3 class="stat-registration">0/24</h3>
+                            <p data-i18n="participantsNeeded">Набір учасників</p>
                         </div>
-
                         <div class="stat-card">
-                            <span>Плей-оф</span>
-                            <h3>8</h3>
-                            <p>Найкращих гравців</p>
+                            <span data-i18n="formatLabel">Формат</span>
+                            <h3 class="stat-groups">6×4</h3>
+                            <p data-i18n="groupsFormat">6 груп по 4 команди</p>
                         </div>
-
                     </div>
-
                 </div>
 
                 <div class="hero-visual">
-
                     <div class="ring ring-one"></div>
                     <div class="ring ring-two"></div>
                     <div class="ring ring-three"></div>
-
                     <div class="hero-logo-card">
-
-                        <span class="logo-label">
-                            ARS LEAGUE
-                        </span>
-
-                        <img
-                            src="images/logo.jpg"
-                            alt="Логотип ARS LEAGUE"
-                            class="hero-logo"
-                        >
-
+                        <span class="logo-label">ARS LEAGUE</span>
+                        <img src="images/logo.jpg" alt="ARS LEAGUE" class="hero-logo">
                         <div class="logo-glow"></div>
-
-                        <div class="logo-info">
-                            <small>EST. 2026</small>
-                            <strong>OFFICIAL LEAGUE</strong>
-                        </div>
-
+                        <div class="logo-info"><small>EST. 2026</small><strong>OFFICIAL LEAGUE</strong></div>
                     </div>
-
-                    <div class="floating-card top">
-                        <span>STATUS</span>
-                        <strong class="status-online">ONLINE</strong>
-                    </div>
-
-                    <div class="floating-card bottom">
-                        <span>CURRENT STAGE</span>
-                        <strong>1/4 FINAL</strong>
-                    </div>
-
+                    <div class="floating-card top"><span>STATUS</span><strong class="status-online">ONLINE</strong></div>
+                    <div class="floating-card bottom"><span>CURRENT STAGE</span><strong class="current-stage">REGISTRATION</strong></div>
                 </div>
-
             </div>
-
-            <div class="scroll-indicator">
-                <span>SCROLL</span>
-            </div>
-
+            <div class="scroll-indicator"><span>SCROLL</span></div>
         </section>
 
         <section class="section tournament" id="tournament">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <span class="section-label">
-                        CURRENT TOURNAMENT
-                    </span>
-
-                    <h2>
-                        Турнір «Династія»
-                    </h2>
-
-                    <p>
-                        Унікальний сезон ARS LEAGUE, у якому кожен учасник
-                        розпочав боротьбу за місце в історії ліги.
-                    </p>
-
+                    <span class="section-label">CURRENT TOURNAMENT</span>
+                    <h2 class="current-tournament-title">ARS CHAMPIONS LEAGUE</h2>
+                    <p data-i18n="tournamentLead">Новий великий турнір ARS LEAGUE. Реєстрація вже відкрита — після набору 24 учасників відбудеться жеребкування шести груп.</p>
                 </div>
 
                 <div class="tournament-layout">
-
                     <article class="tournament-card">
-
-                        <div class="live-badge">
-                            1/4 ФІНАЛУ
-                        </div>
-
-                        <h3>
-                            Турнір офіційно у плей-оф
-                        </h3>
-
-                        <p>
-                            Груповий етап завершено. Вісім найкращих учасників
-                            продовжують боротьбу у чвертьфіналі.
-                            Переможці проходять до 1/2 фіналу.
-                        </p>
+                        <div class="live-badge" data-i18n="registrationOpen">РЕЄСТРАЦІЯ ВІДКРИТА</div>
+                        <h3 data-i18n="registrationInProgress">Триває набір учасників</h3>
+                        <p data-i18n="registrationDescription">ARS CHAMPIONS LEAGUE розрахована на 24 учасники. Після завершення реєстрації команди будуть розподілені на 6 груп по 4.</p>
 
                         <div class="tournament-info">
-
-                            <div class="info-box">
-                                <span>Назва</span>
-                                <strong>Династія</strong>
-                            </div>
-
-                            <div class="info-box">
-                                <span>Поточний етап</span>
-                                <strong>1/4 фіналу</strong>
-                            </div>
-
-                            <div class="info-box">
-                                <span>Дедлайн</span>
-                                <strong>02.08 | 17:00</strong>
-                            </div>
-
+                            <div class="info-box"><span data-i18n="nameLabel">Назва</span><strong>ARS CHAMPIONS LEAGUE</strong></div>
+                            <div class="info-box"><span data-i18n="formatLabel">Формат</span><strong>6 × 4</strong></div>
+                            <div class="info-box"><span data-i18n="deadlineLabel">Дедлайн</span><strong class="registration-deadline">Буде оголошено</strong></div>
                         </div>
 
                         <div class="tournament-buttons">
-
-                            <a
-                                href="#playoffs"
-                                class="btn"
-                            >
-                                Переглянути плей-оф
-                            </a>
-
-                            <a
-                                href="https://t.me/arsturnirs"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="btn secondary"
-                            >
-                                Новини турніру
-                            </a>
-
+                            <a href="https://t.me/arsturnirs" target="_blank" rel="noopener noreferrer" class="btn" data-i18n="registerButton">Зареєструватись</a>
+                            <a href="#groups" class="btn secondary" data-i18n="viewGroups">Переглянути групи</a>
                         </div>
-
                     </article>
 
                     <aside class="tournament-sidebar">
-
-                        <h3>
-                            Статус сезону
-                        </h3>
-
-                        <p>
-                            Турнір наблизився до вирішальної частини.
-                            Попереду чвертьфінали, півфінали, фінал
-                            і матч за третє місце.
-                        </p>
-
+                        <h3 data-i18n="registrationStatus">Статус реєстрації</h3>
+                        <p data-i18n="registrationSidebar">Місця заповнюються. Коли буде набрано 24 учасники, реєстрація закриється і сайт перейде до групового етапу.</p>
                         <div class="sidebar-progress">
-
-                            <div class="progress-title">
-                                <span>Прогрес турніру</span>
-                                <strong>Плей-оф</strong>
-                            </div>
-
-                            <div class="progress-track">
-                                <div class="progress-fill"></div>
-                            </div>
-
+                            <div class="progress-title"><span data-i18n="filledSlots">Заповнено місць</span><strong class="registration-count">0 / 24</strong></div>
+                            <div class="progress-track"><div class="progress-fill registration-progress"></div></div>
                         </div>
-
                         <div class="sidebar-list">
-
-                            <div class="sidebar-item">
-                                <span>Учасників на старті</span>
-                                <strong>16</strong>
-                            </div>
-
-                            <div class="sidebar-item">
-                                <span>У плей-оф</span>
-                                <strong>8</strong>
-                            </div>
-
-                            <div class="sidebar-item">
-                                <span>Чвертьфіналів</span>
-                                <strong>4</strong>
-                            </div>
-
-                            <div class="sidebar-item">
-                                <span>Статус ліги</span>
-                                <strong class="status-online">ONLINE</strong>
-                            </div>
-
+                            <div class="sidebar-item"><span data-i18n="participantsLabel">Учасників</span><strong class="sidebar-participants">0 / 24</strong></div>
+                            <div class="sidebar-item"><span data-i18n="groupsLabel">Груп</span><strong>6</strong></div>
+                            <div class="sidebar-item"><span data-i18n="teamsPerGroup">Команд у групі</span><strong>4</strong></div>
+                            <div class="sidebar-item"><span data-i18n="statusLabel">Статус</span><strong class="status-online" data-i18n="registration">РЕЄСТРАЦІЯ</strong></div>
                         </div>
-
                     </aside>
-
                 </div>
 
                 <div class="participants-block">
-
                     <div class="participants-heading">
-
-                        <div>
-                            <span class="section-label">TOURNAMENT ROSTER</span>
-                            <h3>Учасники турніру</h3>
-                        </div>
-
-                        <span class="participants-count">
-                            16 гравців
-                        </span>
-
+                        <div><span class="section-label" data-i18n="registeredLabel">REGISTERED</span><h3 data-i18n="registeredParticipants">Зареєстровані учасники</h3></div>
+                        <span class="participants-count">0 / 24</span>
                     </div>
-
-                    <div class="participants-grid">
-
-                        <article class="participant-card">
-                            <span class="participant-number">01</span>
-                            <div>
-                                <strong>@FCSMilovereal</strong>
-                                <p>Real Madrid</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">02</span>
-                            <div>
-                                <strong>@Kirill01007</strong>
-                                <p>Manchester United</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">03</span>
-                            <div>
-                                <strong>@dimentiy19</strong>
-                                <p>Kryvbas</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">04</span>
-                            <div>
-                                <strong>@No_Name_KZ08</strong>
-                                <p>Juventus</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">05</span>
-                            <div>
-                                <strong>@xxOD10</strong>
-                                <p>Borussia Dortmund</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">06</span>
-                            <div>
-                                <strong>@komarmukha</strong>
-                                <p>Milan</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">07</span>
-                            <div>
-                                <strong>@tsavaaaa</strong>
-                                <p>Atlético Madrid</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">08</span>
-                            <div>
-                                <strong>@Viteaqa</strong>
-                                <p>Brentford</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">09</span>
-                            <div>
-                                <strong>@Nazar200430</strong>
-                                <p>Manchester United</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">10</span>
-                            <div>
-                                <strong>@spakserega4</strong>
-                                <p>Barcelona</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">11</span>
-                            <div>
-                                <strong>@MehrabyanRaffi</strong>
-                                <p>Como</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">12</span>
-                            <div>
-                                <strong>@neglop092</strong>
-                                <p>Fiorentina</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">13</span>
-                            <div>
-                                <strong>@asvlss</strong>
-                                <p>Nantes</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">14</span>
-                            <div>
-                                <strong>@WondySale</strong>
-                                <p>RC Lens</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">15</span>
-                            <div>
-                                <strong>@MishaBurkoveckii</strong>
-                                <p>Arsenal</p>
-                            </div>
-                        </article>
-
-                        <article class="participant-card">
-                            <span class="participant-number">16</span>
-                            <div>
-                                <strong>@vetal6h</strong>
-                                <p>Newcastle United</p>
-                            </div>
-                        </article>
-
-                    </div>
-
+                    <div class="participants-grid"></div>
+                    <div class="empty-registration" data-i18n="registrationListEmpty">Список буде поповнюватися в міру реєстрації учасників.</div>
                 </div>
-
             </div>
-
         </section>
 
-
-        <section class="section stage-results" id="results">
-
+        <section class="section groups-section" id="groups">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span class="section-label">
-                        REGULAR STAGE RESULTS
-                    </span>
-
-                    <h2>
-                        Підсумки основного етапу
-                    </h2>
-
-                    <p>
-                        Фінальний ELO-рейтинг перед стартом плей-оф.
-                        Перші вісім учасників продовжили боротьбу за титул.
-                    </p>
-
+                    <span class="section-label">GROUP STAGE</span>
+                    <h2 data-i18n="groupsTitle">6 груп × 4 команди</h2>
+                    <p data-i18n="groupsDescription">Групи A–F будуть сформовані після завершення реєстрації та офіційного жеребкування.</p>
                 </div>
-
-                <div class="results-shell">
-
-                    <div class="results-summary">
-
-                        <div class="results-summary-main">
-
-                            <span class="results-kicker">
-                                DYNASTY ELO
-                            </span>
-
-                            <h3>
-                                Топ-8 вийшли у плей-оф
-                            </h3>
-
-                            <p>
-                                Рейтинг сформований за результатами матчів
-                                основного етапу турніру «Династія».
-                            </p>
-
-                        </div>
-
-                        <div class="results-summary-stats">
-
-                            <div>
-                                <span>Учасників</span>
-                                <strong>16</strong>
-                            </div>
-
-                            <div>
-                                <span>У плей-оф</span>
-                                <strong>8</strong>
-                            </div>
-
-                            <div>
-                                <span>Лідер ELO</span>
-                                <strong>Lens · 1138</strong>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="elo-list">
-
-                        <article class="elo-row qualified rank-gold">
-                            <span class="elo-place">01</span>
-                            <div class="elo-club">
-                                <strong>RC Lens</strong>
-                                <small>@WondySale</small>
-                            </div>
-                            <strong class="elo-points">1138</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified rank-silver">
-                            <span class="elo-place">02</span>
-                            <div class="elo-club">
-                                <strong>Real Madrid</strong>
-                                <small>@FCSMilovereal</small>
-                            </div>
-                            <strong class="elo-points">1074</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified rank-bronze">
-                            <span class="elo-place">03</span>
-                            <div class="elo-club">
-                                <strong>Brentford</strong>
-                                <small>@Viteaqa</small>
-                            </div>
-                            <strong class="elo-points">1069</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified">
-                            <span class="elo-place">04</span>
-                            <div class="elo-club">
-                                <strong>Borussia Dortmund</strong>
-                                <small>@xxOD10</small>
-                            </div>
-                            <strong class="elo-points">1047</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified">
-                            <span class="elo-place">05</span>
-                            <div class="elo-club">
-                                <strong>Barcelona</strong>
-                                <small>@spakserega4</small>
-                            </div>
-                            <strong class="elo-points">1043</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified">
-                            <span class="elo-place">06</span>
-                            <div class="elo-club">
-                                <strong>Kryvbas</strong>
-                                <small>@dimentiy19</small>
-                            </div>
-                            <strong class="elo-points">1000</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified">
-                            <span class="elo-place">07</span>
-                            <div class="elo-club">
-                                <strong>Atlético Madrid</strong>
-                                <small>@tsavaaaa</small>
-                            </div>
-                            <strong class="elo-points">997</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row qualified">
-                            <span class="elo-place">08</span>
-                            <div class="elo-club">
-                                <strong>Juventus</strong>
-                                <small>@No_Name_KZ08</small>
-                            </div>
-                            <strong class="elo-points">995</strong>
-                            <span class="elo-status">PLAY-OFF</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">09</span>
-                            <div class="elo-club">
-                                <strong>Nantes</strong>
-                                <small>@asvlss</small>
-                            </div>
-                            <strong class="elo-points">979</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">10</span>
-                            <div class="elo-club">
-                                <strong>Manchester United</strong>
-                                <small>@Nazar200430</small>
-                            </div>
-                            <strong class="elo-points">975</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">11</span>
-                            <div class="elo-club">
-                                <strong>Milan</strong>
-                                <small>@komarmukha</small>
-                            </div>
-                            <strong class="elo-points">969</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">12</span>
-                            <div class="elo-club">
-                                <strong>Manchester United</strong>
-                                <small>@Kirill01007</small>
-                            </div>
-                            <strong class="elo-points">962</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">13</span>
-                            <div class="elo-club">
-                                <strong>Arsenal</strong>
-                                <small>@MishaBurkoveckii</small>
-                            </div>
-                            <strong class="elo-points">960</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">14</span>
-                            <div class="elo-club">
-                                <strong>Como</strong>
-                                <small>@MehrabyanRaffi</small>
-                            </div>
-                            <strong class="elo-points">955</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">15</span>
-                            <div class="elo-club">
-                                <strong>Fiorentina</strong>
-                                <small>@neglop092</small>
-                            </div>
-                            <strong class="elo-points">952</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                        <article class="elo-row eliminated">
-                            <span class="elo-place">16</span>
-                            <div class="elo-club">
-                                <strong>Newcastle United</strong>
-                                <small>@vetal6h</small>
-                            </div>
-                            <strong class="elo-points">885</strong>
-                            <span class="elo-status">OUT</span>
-                        </article>
-
-                    </div>
-
-                </div>
-
+                <div class="groups-grid"></div>
+                <div class="groups-note"><span>INFO</span><p data-i18n="groupsNote">Поки триває набір, місця в групах зарезервовані. Після жеребкування команди з'являться тут автоматично з data.js.</p></div>
             </div>
-
         </section>
 
-        <section class="section playoffs-section" id="playoffs">
-
+        <section class="standings" id="history">
             <div class="container">
-
                 <div class="section-title">
-
-                    <span class="section-label">
-                        LIVE PLAYOFF BRACKET
-                    </span>
-
-                    <h2>
-                        Шлях до чемпіонства
-                    </h2>
-
-                    <p>
-                        Чвертьфінал уже сформований. Переможці кожної пари
-                        автоматично відкриють наступний етап сітки.
-                    </p>
-
+                    <span class="section-label">ARCHIVE</span>
+                    <h2 data-i18n="historyTitle">Історія турнірів</h2>
+                    <p data-i18n="historyDescription">Завершені турніри ARS LEAGUE та їхні чемпіони.</p>
                 </div>
-
-                <div class="live-center">
-
-                    <div class="live-center-status">
-
-                        <span class="live-pulse"></span>
-
-                        <div>
-                            <small>LIVE STATUS</small>
-                            <strong>PLAY-OFF IN PROGRESS</strong>
-                        </div>
-
-                    </div>
-
-                    <div class="live-center-item">
-                        <span>Етап</span>
-                        <strong>1/4 фіналу</strong>
-                    </div>
-
-                    <div class="live-center-item">
-                        <span>Матчів</span>
-                        <strong>4</strong>
-                    </div>
-
-                    <div class="live-center-item deadline-item">
-                        <span>Дедлайн</span>
-                        <strong>02.08 | 17:00</strong>
-                    </div>
-
-                </div>
-
-                <div class="bracket-scroll">
-
-                    <div class="tournament-bracket">
-
-                        <div class="bracket-column quarter-column">
-
-                            <div class="bracket-column-title">
-                                <span>ROUND 01</span>
-                                <strong>1/4 ФІНАЛУ</strong>
-                            </div>
-
-                            <article class="bracket-match quarter-match match-a">
-
-                                <div class="bracket-match-head">
-                                    <span>QF 01</span>
-                                    <strong>НЕ ЗІГРАНО</strong>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@Viteaqa</small>
-                                        <strong>Brentford</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@dimentiy19</small>
-                                        <strong>Kryvbas</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                            </article>
-
-                            <article class="bracket-match quarter-match match-b">
-
-                                <div class="bracket-match-head">
-                                    <span>QF 02</span>
-                                    <strong>НЕ ЗІГРАНО</strong>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@xxOD10</small>
-                                        <strong>Borussia Dortmund</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@WondySale</small>
-                                        <strong>RC Lens</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                            </article>
-
-                            <article class="bracket-match quarter-match match-c">
-
-                                <div class="bracket-match-head">
-                                    <span>QF 03</span>
-                                    <strong>НЕ ЗІГРАНО</strong>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@FCSMilovereal</small>
-                                        <strong>Real Madrid</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@tsavaaaa</small>
-                                        <strong>Atlético Madrid</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                            </article>
-
-                            <article class="bracket-match quarter-match match-d">
-
-                                <div class="bracket-match-head">
-                                    <span>QF 04</span>
-                                    <strong>НЕ ЗІГРАНО</strong>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@No_Name_KZ08</small>
-                                        <strong>Juventus</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                                <div class="bracket-team">
-                                    <div>
-                                        <small>@spakserega4</small>
-                                        <strong>Barcelona</strong>
-                                    </div>
-                                    <span>0</span>
-                                </div>
-
-                            </article>
-
-                        </div>
-
-                        <div class="bracket-column semifinal-column">
-
-                            <div class="bracket-column-title">
-                                <span>ROUND 02</span>
-                                <strong>1/2 ФІНАЛУ</strong>
-                            </div>
-
-                            <article class="bracket-match locked-match semifinal-one">
-
-                                <div class="bracket-match-head">
-                                    <span>SF 01</span>
-                                    <strong>LOCKED</strong>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець QF 01</strong>
-                                    <span>—</span>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець QF 02</strong>
-                                    <span>—</span>
-                                </div>
-
-                            </article>
-
-                            <article class="bracket-match locked-match semifinal-two">
-
-                                <div class="bracket-match-head">
-                                    <span>SF 02</span>
-                                    <strong>LOCKED</strong>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець QF 03</strong>
-                                    <span>—</span>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець QF 04</strong>
-                                    <span>—</span>
-                                </div>
-
-                            </article>
-
-                        </div>
-
-                        <div class="bracket-column final-column">
-
-                            <div class="bracket-column-title">
-                                <span>FINAL ROUND</span>
-                                <strong>ФІНАЛ</strong>
-                            </div>
-
-                            <article class="bracket-match locked-match final-match">
-
-                                <div class="bracket-match-head">
-                                    <span>GRAND FINAL</span>
-                                    <strong>LOCKED</strong>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець SF 01</strong>
-                                    <span>—</span>
-                                </div>
-
-                                <div class="bracket-team placeholder-team">
-                                    <strong>Переможець SF 02</strong>
-                                    <span>—</span>
-                                </div>
-
-                            </article>
-
-                            <div class="champion-slot">
-
-                                <span class="champion-slot-icon">♛</span>
-
-                                <div>
-                                    <small>ARS LEAGUE CHAMPION</small>
-                                    <strong>Буде визначено</strong>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="bracket-note">
-
-                    <span>ОНОВЛЕННЯ СІТКИ</span>
-
-                    <p>
-                        Після завершення матчу рахунок і переможець
-                        будуть додані на сайт.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <section class="standings" id="standings">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span class="section-label">
-                        HALL OF CHAMPIONS
-                    </span>
-
-                    <h2>
-                        Історія турнірів
-                    </h2>
-
-                    <p>
-                        Перші чемпіони в історії ARS LEAGUE.
-                    </p>
-
-                </div>
-
                 <div class="history-table">
-
                     <div class="history-row history-head">
-                        <span>#</span>
-                        <span>Турнір</span>
-                        <span>Чемпіон</span>
-                        <span>Сезон</span>
+                        <span>#</span><span data-i18n="tournamentLabel">Турнір</span><span data-i18n="championLabel">Чемпіон</span><span data-i18n="seasonLabel">Сезон</span>
                     </div>
-
-                    <div class="history-row history-item">
-
-                        <span class="history-number">
-                            01
-                        </span>
-
-                        <div class="history-tournament">
-
-                            <span class="history-icon">
-                                ◆
-                            </span>
-
-                            <div>
-                                <strong>Ліга чемпіонів</strong>
-                                <small>UEFA Champions League</small>
-                            </div>
-
-                        </div>
-
-                        <strong class="history-winner">
-                            Newcastle United
-                        </strong>
-
-                        <span class="history-season">
-                            Season 1
-                        </span>
-
-                    </div>
-
-                    <div class="history-row history-item">
-
-                        <span class="history-number">
-                            02
-                        </span>
-
-                        <div class="history-tournament">
-
-                            <span class="history-icon">
-                                ●
-                            </span>
-
-                            <div>
-                                <strong>Чемпіонат світу</strong>
-                                <small>FIFA World Cup</small>
-                            </div>
-
-                        </div>
-
-                        <strong class="history-winner">
-                            France
-                        </strong>
-
-                        <span class="history-season">
-                            Season 1
-                        </span>
-
-                    </div>
-
-                    <div class="history-row history-item">
-
-                        <span class="history-number">
-                            03
-                        </span>
-
-                        <div class="history-tournament">
-
-                            <span class="history-icon">
-                                ◈
-                            </span>
-
-                            <div>
-                                <strong>Династія</strong>
-                                <small>ARS LEAGUE Special Format</small>
-                            </div>
-
-                        </div>
-
-                        <strong class="history-winner">
-                            Визначається
-                        </strong>
-
-                        <span class="history-season">
-                            Season 2
-                        </span>
-
-                    </div>
-
+                    <div class="history-body"></div>
                 </div>
-
             </div>
-
         </section>
 
         <section class="section about" id="about">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <span class="section-label">
-                        ABOUT THE LEAGUE
-                    </span>
-
-                    <h2>
-                        Що таке ARS LEAGUE?
-                    </h2>
-
-                    <p>
-                        Не просто Telegram-турніри. Це окрема кіберспортивна ліга,
-                        де кожен сезон має власну історію.
-                    </p>
-
+                    <span class="section-label">ARS LEAGUE</span>
+                    <h2 data-i18n="aboutTitle">Що таке ARS LEAGUE?</h2>
+                    <p data-i18n="aboutLead">Не просто Telegram-турніри. Це окрема кіберспортивна ліга, де кожен сезон має власну історію.</p>
                 </div>
-
                 <div class="about-grid">
-
-                    <article class="about-card">
-
-                        <h3>
-                            Унікальні формати
-                        </h3>
-
-                        <p>
-                            Кожен турнір створюється вручну та відрізняється
-                            від попереднього власними правилами й атмосферою.
-                        </p>
-
-                    </article>
-
-                    <article class="about-card">
-
-                        <h3>
-                            Живий сезон
-                        </h3>
-
-                        <p>
-                            Результати, етапи, пари плей-оф і вся ключова
-                            інформація оновлюються протягом турніру.
-                        </p>
-
-                    </article>
-
-                    <article class="about-card">
-
-                        <h3>
-                            Преміальна атмосфера
-                        </h3>
-
-                        <p>
-                            Мінімалістичний дизайн, якісне оформлення,
-                            офіційні анонси та максимальна увага до деталей.
-                        </p>
-
-                    </article>
-
+                    <article class="about-card"><h3 data-i18n="uniqueFormats">Унікальні формати</h3><p data-i18n="uniqueFormatsText">Кожен турнір створюється вручну та відрізняється від попереднього власними правилами й атмосферою.</p></article>
+                    <article class="about-card"><h3 data-i18n="liveSeason">Живий сезон</h3><p data-i18n="liveSeasonText">Учасники, групи, результати та вся ключова інформація оновлюються протягом турніру.</p></article>
+                    <article class="about-card"><h3 data-i18n="premiumAtmosphere">Преміальна атмосфера</h3><p data-i18n="premiumAtmosphereText">Мінімалістичний дизайн, офіційні анонси та максимальна увага до деталей.</p></article>
                 </div>
-
             </div>
-
         </section>
 
         <section class="section champions-section" id="champions">
-
             <div class="container">
-
                 <div class="section-title">
-
-                    <span class="section-label">
-                        LEGACY
-                    </span>
-
-                    <h2>
-                        Зал слави
-                    </h2>
-
-                    <p>
-                        Тут назавжди залишаються переможці,
-                        які вже вписали свої імена в історію ARS LEAGUE.
-                    </p>
-
+                    <span class="section-label">HALL OF FAME</span>
+                    <h2 data-i18n="hallOfFame">Зал слави</h2>
+                    <p data-i18n="hallDescription">Тут назавжди залишаються переможці, які вже вписали свої імена в історію ARS LEAGUE.</p>
                 </div>
-
-                <div class="champions">
-
-                    <article class="champion-card">
-
-                        <div class="champion-cup">
-                            🏆
-                        </div>
-
-                        <span class="champion-season">
-                            SEASON 01
-                        </span>
-
-                        <h3>
-                            Newcastle United
-                        </h3>
-
-                        <p>
-                            Чемпіон турніру UEFA Champions League.
-                        </p>
-
-                    </article>
-
-                    <article class="champion-card">
-
-                        <div class="champion-cup">
-                            🏆
-                        </div>
-
-                        <span class="champion-season">
-                            SEASON 01
-                        </span>
-
-                        <h3>
-                            France
-                        </h3>
-
-                        <p>
-                            Чемпіон турніру FIFA World Cup.
-                        </p>
-
-                    </article>
-
-                    <article class="champion-card">
-
-                        <div class="champion-cup">
-                            ◈
-                        </div>
-
-                        <span class="champion-season">
-                            SEASON 02
-                        </span>
-
-                        <h3>
-                            Династія
-                        </h3>
-
-                        <p>
-                            Новий чемпіон буде визначений у поточному плей-оф.
-                        </p>
-
-                    </article>
-
-                </div>
-
+                <div class="champions"></div>
             </div>
-
         </section>
-
     </main>
 
     <footer>
-
-        <div class="container">
-
-            <div class="footer-content">
-
-                <a href="#home" class="logo footer-logo">
-
-                    <img
-                        src="images/logo.jpg"
-                        alt="Логотип ARS LEAGUE"
-                        class="site-logo footer-logo-image"
-                    >
-
-                    <div class="logo-text">
-                        <h1>ARS <span>LEAGUE</span></h1>
-                        <p>Official eFootball League</p>
-                    </div>
-
-                </a>
-
-                <nav class="footer-navigation" aria-label="Навігація у футері">
-                    <a href="#home">Головна</a>
-                    <a href="#tournament">Турнір</a>
-                    <a href="#results">Результати</a>
-                    <a href="#playoffs">Плей-оф</a>
-                    <a href="#about">Про лігу</a>
-                    <a href="#champions">Чемпіони</a>
-                </nav>
-
-            </div>
-
-            <div class="footer-bottom">
-                <p>© 2026 ARS LEAGUE</p>
-                <p>Official eFootball Community</p>
-            </div>
-
+        <div class="container footer-content">
+            <a href="#home" class="logo">
+                <img src="images/logo.jpg" alt="ARS LEAGUE" class="site-logo">
+                <div class="logo-text"><h1>ARS <span>LEAGUE</span></h1><p>Official eFootball League</p></div>
+            </a>
+            <nav class="footer-navigation">
+                <a href="#tournament" data-i18n="navTournament">Турнір</a>
+                <a href="#groups" data-i18n="navGroups">Групи</a>
+                <a href="#history" data-i18n="navHistory">Історія</a>
+                <a href="#champions" data-i18n="navChampions">Чемпіони</a>
+            </nav>
         </div>
-
+        <div class="container footer-bottom"><p>© 2026 ARS LEAGUE</p><p>Official eFootball Community</p></div>
     </footer>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
-
 </body>
-
 </html>

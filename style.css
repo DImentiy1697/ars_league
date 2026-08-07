@@ -2148,3 +2148,203 @@ footer {
         order: 3;
     }
 }
+
+/* =========================================================
+   ARS CHAMPIONS LEAGUE — REGISTRATION + GROUP STAGE
+========================================================= */
+
+.language-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border: 1px solid rgba(192, 132, 252, 0.18);
+    border-radius: 12px;
+    background: rgba(168, 85, 247, 0.07);
+}
+
+.language-switcher span {
+    color: rgba(255, 255, 255, 0.22);
+}
+
+.language-btn {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.language-btn:hover,
+.language-btn.active {
+    color: var(--white);
+    text-shadow: 0 0 12px rgba(192, 132, 252, 0.55);
+}
+
+.registration-progress {
+    width: 0;
+    transition: width 0.5s ease;
+}
+
+.empty-registration {
+    margin-top: 6px;
+    padding: 24px;
+    border: 1px dashed rgba(192, 132, 252, 0.2);
+    border-radius: 18px;
+    color: var(--muted);
+    text-align: center;
+    background: rgba(168, 85, 247, 0.035);
+}
+
+.groups-section {
+    background:
+        radial-gradient(circle at 20% 0%, rgba(168, 85, 247, 0.08), transparent 32%),
+        radial-gradient(circle at 85% 80%, rgba(127, 29, 29, 0.06), transparent 30%);
+}
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.group-card {
+    overflow: hidden;
+    border: 1px solid rgba(192, 132, 252, 0.2);
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(27, 18, 36, 0.9), rgba(12, 8, 17, 0.96));
+    box-shadow: var(--shadow);
+}
+
+.group-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(90deg, rgba(109, 40, 217, 0.22), rgba(168, 85, 247, 0.05));
+}
+
+.group-card-head span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.group-card-head strong {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(192, 132, 252, 0.28);
+    border-radius: 13px;
+    background: rgba(168, 85, 247, 0.12);
+    color: var(--purple-light);
+    font-family: "Orbitron", sans-serif;
+    font-size: 18px;
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.1);
+}
+
+.group-team {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 13px;
+    min-height: 72px;
+    padding: 13px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+.group-team:last-child {
+    border-bottom: 0;
+}
+
+.group-team > span {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: rgba(168, 85, 247, 0.09);
+    color: var(--purple-light);
+    font-family: "Orbitron", sans-serif;
+    font-size: 11px;
+}
+
+.group-team strong,
+.group-team small {
+    display: block;
+}
+
+.group-team strong {
+    color: var(--white);
+    font-size: 17px;
+}
+
+.group-team small {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.group-team-empty {
+    opacity: 0.62;
+}
+
+.group-team-empty strong {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.groups-note {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+    padding: 19px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.groups-note span {
+    color: var(--purple-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+
+.groups-note p {
+    color: var(--muted);
+    line-height: 1.55;
+}
+
+.history-body {
+    display: contents;
+}
+
+@media (max-width: 1050px) {
+    .groups-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .language-switcher {
+        order: 3;
+    }
+}
+
+@media (max-width: 650px) {
+    .groups-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .groups-note {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
