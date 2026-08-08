@@ -71,102 +71,54 @@ window.ARS_DATA = {
         ]
     },
     matches: {
-    A: [
-        { home: "@shapus2", away: "@FCSMilovereal", homeScore: null, awayScore: null },
-        { home: "@shapus2", away: "@Lalitovv", homeScore: null, awayScore: null },
-        { home: "@shapus2", away: "@V_llaa_d", homeScore: null, awayScore: null },
-        { home: "@FCSMilovereal", away: "@Lalitovv", homeScore: null, awayScore: null },
-        { home: "@FCSMilovereal", away: "@V_llaa_d", homeScore: null, awayScore: null },
-        { home: "@Lalitovv", away: "@V_llaa_d", homeScore: null, awayScore: null },
-
-        { home: "@FCSMilovereal", away: "@shapus2", homeScore: null, awayScore: null },
-        { home: "@Lalitovv", away: "@shapus2", homeScore: null, awayScore: null },
-        { home: "@V_llaa_d", away: "@shapus2", homeScore: null, awayScore: null },
-        { home: "@Lalitovv", away: "@FCSMilovereal", homeScore: null, awayScore: null },
-        { home: "@V_llaa_d", away: "@FCSMilovereal", homeScore: null, awayScore: null },
-        { home: "@V_llaa_d", away: "@Lalitovv", homeScore: null, awayScore: null }
-    ],
-
-    B: [
-        { home: "@Mbappe_501", away: "@Limbo_66", homeScore: null, awayScore: null },
-        { home: "@Mbappe_501", away: "@Oraxan", homeScore: null, awayScore: null },
-        { home: "@Mbappe_501", away: "@spakserega4", homeScore: null, awayScore: null },
-        { home: "@Limbo_66", away: "@Oraxan", homeScore: null, awayScore: null },
-        { home: "@Limbo_66", away: "@spakserega4", homeScore: null, awayScore: null },
-        { home: "@Oraxan", away: "@spakserega4", homeScore: null, awayScore: null },
-
-        { home: "@Limbo_66", away: "@Mbappe_501", homeScore: null, awayScore: null },
-        { home: "@Oraxan", away: "@Mbappe_501", homeScore: null, awayScore: null },
-        { home: "@spakserega4", away: "@Mbappe_501", homeScore: null, awayScore: null },
-        { home: "@Oraxan", away: "@Limbo_66", homeScore: null, awayScore: null },
-        { home: "@spakserega4", away: "@Limbo_66", homeScore: null, awayScore: null },
-        { home: "@spakserega4", away: "@Oraxan", homeScore: null, awayScore: null }
-    ],
-
-    C: [
-        { home: "@WondySale", away: "@destrooooo12", homeScore: null, awayScore: null },
-        { home: "@WondySale", away: "@kentyxa26", homeScore: null, awayScore: null },
-        { home: "@WondySale", away: "@terehjuve", homeScore: null, awayScore: null },
-        { home: "@destrooooo12", away: "@kentyxa26", homeScore: null, awayScore: null },
-        { home: "@destrooooo12", away: "@terehjuve", homeScore: null, awayScore: null },
-        { home: "@kentyxa26", away: "@terehjuve", homeScore: null, awayScore: null },
-
-        { home: "@destrooooo12", away: "@WondySale", homeScore: null, awayScore: null },
-        { home: "@kentyxa26", away: "@WondySale", homeScore: null, awayScore: null },
-        { home: "@terehjuve", away: "@WondySale", homeScore: null, awayScore: null },
-        { home: "@kentyxa26", away: "@destrooooo12", homeScore: null, awayScore: null },
-        { home: "@terehjuve", away: "@destrooooo12", homeScore: null, awayScore: null },
-        { home: "@terehjuve", away: "@kentyxa26", homeScore: null, awayScore: null }
-    ],
-
-    D: [
-        { home: "@MishaBurkoveckii", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
-        { home: "@MishaBurkoveckii", away: "@tsavaaaa", homeScore: null, awayScore: null },
-        { home: "@MishaBurkoveckii", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
-        { home: "@MehrabyanRaffi", away: "@tsavaaaa", homeScore: null, awayScore: null },
-        { home: "@MehrabyanRaffi", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
-        { home: "@tsavaaaa", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
-
-        { home: "@MehrabyanRaffi", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
-        { home: "@tsavaaaa", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
-        { home: "@No_Name_KZ08", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
-        { home: "@tsavaaaa", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
-        { home: "@No_Name_KZ08", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
-        { home: "@No_Name_KZ08", away: "@tsavaaaa", homeScore: null, awayScore: null }
-    ],
-
-    E: [
-        { home: "@finallygetaway", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
-        { home: "@finallygetaway", away: "@Yeuwubs", homeScore: null, awayScore: null },
-        { home: "@finallygetaway", away: "@Viteaqa", homeScore: null, awayScore: null },
-        { home: "@Liverpoolfc1892i", away: "@Yeuwubs", homeScore: null, awayScore: null },
-        { home: "@Liverpoolfc1892i", away: "@Viteaqa", homeScore: null, awayScore: null },
-        { home: "@Yeuwubs", away: "@Viteaqa", homeScore: null, awayScore: null },
-
-        { home: "@Liverpoolfc1892i", away: "@finallygetaway", homeScore: null, awayScore: null },
-        { home: "@Yeuwubs", away: "@finallygetaway", homeScore: null, awayScore: null },
-        { home: "@Viteaqa", away: "@finallygetaway", homeScore: null, awayScore: null },
-        { home: "@Yeuwubs", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
-        { home: "@Viteaqa", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
-        { home: "@Viteaqa", away: "@Yeuwubs", homeScore: null, awayScore: null }
-    ],
-
-    F: [
-        { home: "@asvlss", away: "@Andfoza", homeScore: null, awayScore: null },
-        { home: "@asvlss", away: "@dimentiy19", homeScore: null, awayScore: null },
-        { home: "@asvlss", away: "@Vetal6h", homeScore: null, awayScore: null },
-        { home: "@Andfoza", away: "@dimentiy19", homeScore: null, awayScore: null },
-        { home: "@Andfoza", away: "@Vetal6h", homeScore: null, awayScore: null },
-        { home: "@dimentiy19", away: "@Vetal6h", homeScore: null, awayScore: null },
-
-        { home: "@Andfoza", away: "@asvlss", homeScore: null, awayScore: null },
-        { home: "@dimentiy19", away: "@asvlss", homeScore: null, awayScore: null },
-        { home: "@Vetal6h", away: "@asvlss", homeScore: null, awayScore: null },
-        { home: "@dimentiy19", away: "@Andfoza", homeScore: null, awayScore: null },
-        { home: "@Vetal6h", away: "@Andfoza", homeScore: null, awayScore: null },
-        { home: "@Vetal6h", away: "@dimentiy19", homeScore: null, awayScore: null }
-    ]
-},
+        A: [
+            { home: "@shapus2", away: "@FCSMilovereal", homeScore: null, awayScore: null },
+            { home: "@shapus2", away: "@Lalitovv", homeScore: null, awayScore: null },
+            { home: "@shapus2", away: "@V_llaa_d", homeScore: null, awayScore: null },
+            { home: "@FCSMilovereal", away: "@Lalitovv", homeScore: null, awayScore: null },
+            { home: "@FCSMilovereal", away: "@V_llaa_d", homeScore: null, awayScore: null },
+            { home: "@Lalitovv", away: "@V_llaa_d", homeScore: null, awayScore: null }
+        ],
+        B: [
+            { home: "@Mbappe_501", away: "@Limbo_66", homeScore: null, awayScore: null },
+            { home: "@Mbappe_501", away: "@Oraxan", homeScore: null, awayScore: null },
+            { home: "@Mbappe_501", away: "@spakserega4", homeScore: null, awayScore: null },
+            { home: "@Limbo_66", away: "@Oraxan", homeScore: null, awayScore: null },
+            { home: "@Limbo_66", away: "@spakserega4", homeScore: null, awayScore: null },
+            { home: "@Oraxan", away: "@spakserega4", homeScore: null, awayScore: null }
+        ],
+        C: [
+            { home: "@WondySale", away: "@destrooooo12", homeScore: null, awayScore: null },
+            { home: "@WondySale", away: "@kentyxa26", homeScore: null, awayScore: null },
+            { home: "@WondySale", away: "@terehjuve", homeScore: null, awayScore: null },
+            { home: "@destrooooo12", away: "@kentyxa26", homeScore: null, awayScore: null },
+            { home: "@destrooooo12", away: "@terehjuve", homeScore: null, awayScore: null },
+            { home: "@kentyxa26", away: "@terehjuve", homeScore: null, awayScore: null }
+        ],
+        D: [
+            { home: "@MishaBurkoveckii", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
+            { home: "@MishaBurkoveckii", away: "@tsavaaaa", homeScore: null, awayScore: null },
+            { home: "@MishaBurkoveckii", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
+            { home: "@MehrabyanRaffi", away: "@tsavaaaa", homeScore: null, awayScore: null },
+            { home: "@MehrabyanRaffi", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
+            { home: "@tsavaaaa", away: "@No_Name_KZ08", homeScore: null, awayScore: null }
+        ],
+        E: [
+            { home: "@finallygetaway", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
+            { home: "@finallygetaway", away: "@Yeuwubs", homeScore: null, awayScore: null },
+            { home: "@finallygetaway", away: "@Viteaqa", homeScore: null, awayScore: null },
+            { home: "@Liverpoolfc1892i", away: "@Yeuwubs", homeScore: null, awayScore: null },
+            { home: "@Liverpoolfc1892i", away: "@Viteaqa", homeScore: null, awayScore: null },
+            { home: "@Yeuwubs", away: "@Viteaqa", homeScore: null, awayScore: null }
+        ],
+        F: [
+            { home: "@asvlss", away: "@Andfoza", homeScore: null, awayScore: null },
+            { home: "@asvlss", away: "@dimentiy19", homeScore: null, awayScore: null },
+            { home: "@asvlss", away: "@Vetal6h", homeScore: null, awayScore: null },
+            { home: "@Andfoza", away: "@dimentiy19", homeScore: null, awayScore: null },
+            { home: "@Andfoza", away: "@Vetal6h", homeScore: null, awayScore: null },
+            { home: "@dimentiy19", away: "@Vetal6h", homeScore: null, awayScore: null }
+        ]
     },
     history: [
         { icon: "◆", tournament: "Ліга чемпіонів", tournamentRu: "Лига чемпионов", subtitle: "UEFA Champions League", champion: "Newcastle United", season: "Season 1" },
