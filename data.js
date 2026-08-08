@@ -148,7 +148,7 @@ window.ARS_DATA = {
             { home: "@MishaBurkoveckii", away: "@tsavaaaa", homeScore: null, awayScore: null },
             { home: "@MishaBurkoveckii", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
             { home: "@MehrabyanRaffi", away: "@tsavaaaa", homeScore: null, awayScore: null },
-            { home: "@MehrabyanRaffi", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
+            { home: "@MehrabyanRaffi", away: "@No_Name_KZ08", homeScore: 2, awayScore: 0 },
             { home: "@tsavaaaa", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
 
             { home: "@MehrabyanRaffi", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
@@ -160,30 +160,30 @@ window.ARS_DATA = {
         ],
 
         E: [
-            { home: "@finallygetaway", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
+            { home: "@finallygetaway", away: "@Liverpoolfc1892i", homeScore: 1, awayScore: 4 },
             { home: "@finallygetaway", away: "@Yeuwubs", homeScore: null, awayScore: null },
             { home: "@finallygetaway", away: "@Viteaqa", homeScore: null, awayScore: null },
             { home: "@Liverpoolfc1892i", away: "@Yeuwubs", homeScore: null, awayScore: null },
-            { home: "@Liverpoolfc1892i", away: "@Viteaqa", homeScore: null, awayScore: null },
+            { home: "@Liverpoolfc1892i", away: "@Viteaqa", homeScore: 1, awayScore: 4 },
             { home: "@Yeuwubs", away: "@Viteaqa", homeScore: null, awayScore: null },
 
-            { home: "@Liverpoolfc1892i", away: "@finallygetaway", homeScore: null, awayScore: null },
+            { home: "@Liverpoolfc1892i", away: "@finallygetaway", homeScore: 4, awayScore: 1 },
             { home: "@Yeuwubs", away: "@finallygetaway", homeScore: null, awayScore: null },
             { home: "@Viteaqa", away: "@finallygetaway", homeScore: null, awayScore: null },
             { home: "@Yeuwubs", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
-            { home: "@Viteaqa", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
+            { home: "@Viteaqa", away: "@Liverpoolfc1892i", homeScore: 4, awayScore: 0 },
             { home: "@Viteaqa", away: "@Yeuwubs", homeScore: null, awayScore: null }
         ],
 
         F: [
-            { home: "@asvlss", away: "@Andfoza", homeScore: null, awayScore: null },
+            { home: "@asvlss", away: "@Andfoza", homeScore: 1, awayScore: 0 },
             { home: "@asvlss", away: "@dimentiy19", homeScore: null, awayScore: null },
             { home: "@asvlss", away: "@Vetal6h", homeScore: null, awayScore: null },
             { home: "@Andfoza", away: "@dimentiy19", homeScore: null, awayScore: null },
             { home: "@Andfoza", away: "@Vetal6h", homeScore: null, awayScore: null },
             { home: "@dimentiy19", away: "@Vetal6h", homeScore: null, awayScore: null },
 
-            { home: "@Andfoza", away: "@asvlss", homeScore: null, awayScore: null },
+            { home: "@Andfoza", away: "@asvlss", homeScore: 3, awayScore: 0 },
             { home: "@dimentiy19", away: "@asvlss", homeScore: 3, awayScore: 0 },
             { home: "@Vetal6h", away: "@asvlss", homeScore: null, awayScore: null },
             { home: "@dimentiy19", away: "@Andfoza", homeScore: 3, awayScore: 2 },
