@@ -130,7 +130,7 @@ window.ARS_DATA = {
         C: [
             { home: "@WondySale", away: "@destrooooo12", homeScore: null, awayScore: null },
             { home: "@WondySale", away: "@kentyxa26", homeScore: null, awayScore: null },
-            { home: "@WondySale", away: "@terehjuve", homeScore: null, awayScore: null },
+            { home: "@WondySale", away: "@terehjuve", homeScore: 4, awayScore: 1 },
             { home: "@destrooooo12", away: "@kentyxa26", homeScore: null, awayScore: null },
             { home: "@destrooooo12", away: "@terehjuve", homeScore: null, awayScore: null },
             { home: "@kentyxa26", away: "@terehjuve", homeScore: null, awayScore: null },
