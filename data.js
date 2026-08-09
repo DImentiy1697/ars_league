@@ -96,14 +96,14 @@ window.ARS_DATA = {
 
     matches: {
         A: [
-            { home: "@shapus2", away: "@FCSMilovereal", homeScore: null, awayScore: null },
+            { home: "@shapus2", away: "@FCSMilovereal", homeScore: 0, awayScore: 2 },
             { home: "@shapus2", away: "@Lalitovv", homeScore: null, awayScore: null },
             { home: "@shapus2", away: "@V_llaa_d", homeScore: null, awayScore: null },
             { home: "@FCSMilovereal", away: "@Lalitovv", homeScore: null, awayScore: null },
             { home: "@FCSMilovereal", away: "@V_llaa_d", homeScore: null, awayScore: null },
             { home: "@Lalitovv", away: "@V_llaa_d", homeScore: null, awayScore: null },
 
-            { home: "@FCSMilovereal", away: "@shapus2", homeScore: null, awayScore: null },
+            { home: "@FCSMilovereal", away: "@shapus2", homeScore: 4, awayScore: 4 },
             { home: "@Lalitovv", away: "@shapus2", homeScore: null, awayScore: null },
             { home: "@V_llaa_d", away: "@shapus2", homeScore: null, awayScore: null },
             { home: "@Lalitovv", away: "@FCSMilovereal", homeScore: null, awayScore: null },
@@ -123,7 +123,7 @@ window.ARS_DATA = {
             { home: "@Oraxan", away: "@Mbappe_501", homeScore: null, awayScore: null },
             { home: "@spakserega4", away: "@Mbappe_501", homeScore: null, awayScore: null },
             { home: "@Oraxan", away: "@Limbo_66", homeScore: null, awayScore: null },
-            { home: "@spakserega4", away: "@Limbo_66", homeScore: null, awayScore: null },
+            { home: "@spakserega4", away: "@Limbo_66", homeScore: 1, awayScore: 3 },
             { home: "@spakserega4", away: "@Oraxan", homeScore: null, awayScore: null }
         ],
 
