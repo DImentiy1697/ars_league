@@ -103,7 +103,7 @@ window.ARS_DATA = {
             { home: "@FCSMilovereal", away: "@V_llaa_d", homeScore: null, awayScore: null },
             { home: "@Lalitovv", away: "@V_llaa_d", homeScore: null, awayScore: null },
 
-            { home: "@FCSMilovereal", away: "@shapus2", homeScore: 4, awayScore: 4 },
+            { home: "@FCSMilovereal", away: "@shapus2", homeScore: 4, awayScore: 1 },
             { home: "@Lalitovv", away: "@shapus2", homeScore: null, awayScore: null },
             { home: "@V_llaa_d", away: "@shapus2", homeScore: null, awayScore: null },
             { home: "@Lalitovv", away: "@FCSMilovereal", homeScore: null, awayScore: null },
