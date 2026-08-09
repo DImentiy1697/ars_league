@@ -96,7 +96,7 @@ window.ARS_DATA = {
 
     matches: {
         A: [
-            { home: "@shapus2", away: "@FCSMilovereal", homeScore: 0, awayScore: 2 },
+            { home: "@shapus2", away: "@FCSMilovereal", homeScore: 2, awayScore: 0 },
             { home: "@shapus2", away: "@Lalitovv", homeScore: null, awayScore: null },
             { home: "@shapus2", away: "@V_llaa_d", homeScore: null, awayScore: null },
             { home: "@FCSMilovereal", away: "@Lalitovv", homeScore: null, awayScore: null },
