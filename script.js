@@ -235,21 +235,47 @@ document.addEventListener("DOMContentLoaded", () => {
             const p = (data.participants || []).find(x => x.username === username);
             return p ? p.club : username;
         };
-        const cards = data.playoffs.roundOf16.map((m, i) => `
-            <div class="playoff-card">
-                <div class="playoff-match-no">MATCH ${i + 1}</div>
-                <div class="playoff-team"><span class="playoff-seed">${m.homeSeed}</span><b>${clubOf(m.home)}</b><small>${m.home}</small></div>
-                <div class="playoff-vs">VS</div>
-                <div class="playoff-team"><span class="playoff-seed">${m.awaySeed}</span><b>${clubOf(m.away)}</b><small>${m.away}</small></div>
-            </div>`).join("");
-        const eliminated = (data.playoffs.eliminatedThirds || []).map(x => `${x.seed} ${x.club} (${x.reason})`).join(" • ");
+        const team = (seed, username, score = null) => `
+            <div class="bracket-team">
+                <span class="bracket-seed">${seed || ""}</span>
+                <span class="bracket-club">${clubOf(username)}</span>
+                <span class="bracket-score">${score ?? "—"}</span>
+            </div>`;
+        const match = (m, label) => `
+            <div class="bracket-match">
+                <span class="bracket-match-label">${label}</span>
+                ${team(m.homeSeed, m.home, m.homeScore)}
+                ${team(m.awaySeed, m.away, m.awayScore)}
+            </div>`;
+        const r16 = data.playoffs.roundOf16;
+        const qf = [0,1,2,3].map(i => `<div class="bracket-match bracket-placeholder"><span class="bracket-match-label">QF ${i+1}</span>${team("", "TBD")}${team("", "TBD")}</div>`).join("");
+        const sf = [0,1].map(i => `<div class="bracket-match bracket-placeholder"><span class="bracket-match-label">SF ${i+1}</span>${team("", "TBD")}${team("", "TBD")}</div>`).join("");
+        const final = `<div class="bracket-match bracket-final bracket-placeholder"><span class="bracket-match-label">GRAND FINAL</span>${team("", "TBD")}${team("", "TBD")}</div>`;
         section.innerHTML = `
-            <div class="container">
-                <div class="section-kicker">PLAYOFFS</div>
-                <h2 class="section-title">${data.playoffs.stage || "1/8 ФІНАЛУ"}</h2>
-                <p class="playoff-note">${currentLanguage === "ru" ? data.playoffs.noteRu : data.playoffs.noteUk}</p>
-                <div class="playoff-grid">${cards}</div>
-                <div class="playoff-eliminated">OUT: ${eliminated}</div>
+            <div class="container playoffs-head">
+                <span class="section-kicker">ARS CHAMPIONS LEAGUE · PLAYOFFS</span>
+                <h2 class="playoffs-title">ШЛЯХ ДО <span>ТРОФЕЮ</span></h2>
+                <p class="playoffs-subtitle">16 команд. 4 раунди. 1 чемпіон.</p>
+            </div>
+            <div class="bracket-scroll">
+                <div class="bracket-shell">
+                    <div class="bracket-column bracket-r16">
+                        <div class="bracket-round-title"><small>ROUND OF 16</small><strong>1/8 ФІНАЛУ</strong></div>
+                        <div class="bracket-round-matches">${r16.map((m,i)=>match(m, `MATCH ${i+1}`)).join("")}</div>
+                    </div>
+                    <div class="bracket-column bracket-qf">
+                        <div class="bracket-round-title"><small>QUARTERFINALS</small><strong>1/4 ФІНАЛУ</strong></div>
+                        <div class="bracket-round-matches">${qf}</div>
+                    </div>
+                    <div class="bracket-column bracket-sf">
+                        <div class="bracket-round-title"><small>SEMIFINALS</small><strong>1/2 ФІНАЛУ</strong></div>
+                        <div class="bracket-round-matches">${sf}</div>
+                    </div>
+                    <div class="bracket-column bracket-fn">
+                        <div class="bracket-round-title"><small>FINAL</small><strong>ФІНАЛ</strong></div>
+                        <div class="bracket-round-matches">${final}<div class="bracket-trophy">🏆<span>ARS CHAMPION</span></div></div>
+                    </div>
+                </div>
             </div>`;
     }
 
