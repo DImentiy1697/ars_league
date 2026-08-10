@@ -9,13 +9,13 @@ window.ARS_DATA = {
         badge: "OFFICIAL EFOOTBALL LEAGUE",
         topTitle: "THE NEW ERA BEGINS",
         titleLines: ["PLAY.", "COMPETE.", "BECOME A LEGEND."],
-        currentStageEnglish: "ROUND OF 16"
+        currentStageEnglish: "PLAYOFFS • ROUND OF 16"
     },
 
     tournament: {
         name: "ARS CHAMPIONS LEAGUE",
         shortName: "ACL",
-        status: "round_of_16",
+        status: "playoffs",
         targetParticipants: 24,
         groupCount: 6,
         teamsPerGroup: 4,

@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dictionary = {
         uk: {
-            navHome: "Головна", navTournament: "Турнір", navGroups: "Групи", navHistory: "Історія", navAbout: "Про лігу", navChampions: "Чемпіони",
+            navHome: "Головна", navTournament: "Турнір", navGroups: "Групи", navPlayoffs: "Плей-оф", navHistory: "Історія", navAbout: "Про лігу", navChampions: "Чемпіони",
             heroDescription: "ARS LEAGUE — це місце, де кожен сезон стає новою історією, а кожен матч має значення.",
             join: "Приєднатись", currentTournament: "Актуальний турнір", currentTournamentLabel: "Поточний турнір",
             registrationLabel: "Реєстрація", participantsNeeded: "Набір учасників", formatLabel: "Формат", groupsFormat: "6 груп по 4 команди",
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             announcedSoon: "Буде оголошено"
         },
         ru: {
-            navHome: "Главная", navTournament: "Турнир", navGroups: "Группы", navHistory: "История", navAbout: "О лиге", navChampions: "Чемпионы",
+            navHome: "Главная", navTournament: "Турнир", navGroups: "Группы", navPlayoffs: "Плей-офф", navHistory: "История", navAbout: "О лиге", navChampions: "Чемпионы",
             heroDescription: "ARS LEAGUE — это место, где каждый сезон становится новой историей, а каждый матч имеет значение.",
             join: "Присоединиться", currentTournament: "Актуальный турнир", currentTournamentLabel: "Текущий турнир",
             registrationLabel: "Регистрация", participantsNeeded: "Набор участников", formatLabel: "Формат", groupsFormat: "6 групп по 4 команды",
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="container">
                 <div class="section-kicker">PLAYOFFS</div>
                 <h2 class="section-title">${data.playoffs.stage || "1/8 ФІНАЛУ"}</h2>
-                <p class="playoff-note">${currentLang === "ru" ? data.playoffs.noteRu : data.playoffs.noteUk}</p>
+                <p class="playoff-note">${currentLanguage === "ru" ? data.playoffs.noteRu : data.playoffs.noteUk}</p>
                 <div class="playoff-grid">${cards}</div>
                 <div class="playoff-eliminated">OUT: ${eliminated}</div>
             </div>`;
