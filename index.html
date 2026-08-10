@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260811-0138">
 </head>
 <body>
     <div class="progress-bar"></div>
@@ -164,24 +164,31 @@
             </div>
         </section>
 
-        
         <section class="section playoffs-section" id="playoffs">
             <div class="playoff-bg-grid" aria-hidden="true"></div>
             <div class="container playoff-heading">
                 <span class="section-label">PLAYOFFS · TWO-LEG FORMAT</span>
                 <h2>ROAD TO <span>THE TROPHY</span></h2>
-                <p class="playoff-description">Every tie is played over two legs. The aggregate score decides who advances.</p>
+                <p class="playoff-description">Every tie is played over two legs. Aggregate score decides who advances.</p>
             </div>
+
             <div class="playoff-stage-nav" aria-label="Playoff rounds">
-                <span>ROUND OF 16</span><span>QUARTERFINALS</span><span>SEMIFINALS</span><span>FINAL</span>
+                <span>ROUND OF 16</span>
+                <span>QUARTERFINALS</span>
+                <span>SEMIFINALS</span>
+                <span>FINAL</span>
             </div>
+
             <div class="playoff-bracket-wrap">
-                <div class="playoff-bracket" id="playoffBracket"></div>
+                <div class="playoff-bracket" id="playoffBracket">
+                    <div class="playoff-loading">Loading playoff bracket…</div>
+                </div>
             </div>
+
             <div class="container playoff-note" id="playoffNote"></div>
         </section>
 
-        <section class="standings" id="history">
+<section class="standings" id="history">
             <div class="container">
                 <div class="section-title">
                     <span class="section-label">ARCHIVE</span>
@@ -241,7 +248,8 @@
         <div class="container footer-bottom"><p>© 2026 ARS LEAGUE</p><p>Official eFootball Community</p></div>
     </footer>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data.js?v=20260811-0138"></script>
+    <script src="script.js?v=20260811-0138"></script>
+    <script src="playoff.js?v=20260811-0138"></script>
 </body>
 </html>

@@ -2569,3 +2569,16 @@ footer {
     .po-agg{font-size:13px}
     .playoff-note{width:calc(100% - 28px);font-size:13px}
 }
+
+/* HARD FIX: playoff section must always be visible */
+#playoffs{display:block!important;visibility:visible!important;opacity:1!important;min-height:600px}
+#playoffBracket{display:grid!important}
+.playoff-loading{
+  grid-column:1/-1;
+  padding:40px;
+  text-align:center;
+  border:1px solid rgba(192,132,252,.3);
+  border-radius:16px;
+  color:#c084fc;
+  font-family:"Orbitron",sans-serif;
+}
