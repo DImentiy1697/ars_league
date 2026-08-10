@@ -221,67 +221,90 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function renderPlayoffs() {
-        const root = document.getElementById("playoffs");
-        if (!root) return;
-        const p = DATA.playoffs || {};
-        const r16 = p.roundOf16 || [];
+        const bracketRoot = document.getElementById("playoffBracket");
+        const note = document.getElementById("playoffNote");
+        if (!bracketRoot || !data.playoffs) return;
 
-        const getClub = (username) => {
-            const u = (DATA.participants || []).find(x => x.username === username);
-            return u ? u.club : (username || "TBD");
-        };
-        const leg = (m, n, side) => {
-            const keys = n === 1
-              ? (side === "home" ? ["homeScore","homeScore1"] : ["awayScore","awayScore1"])
-              : (side === "home" ? ["homeScore2","secondHomeScore"] : ["awayScore2","secondAwayScore"]);
-            for (const k of keys) if (m && m[k] !== undefined && m[k] !== null) return m[k];
-            return "–";
-        };
-        const agg = (m, side) => {
-            const a=leg(m,1,side), b=leg(m,2,side);
-            return (a==="–" || b==="–") ? "–" : Number(a)+Number(b);
-        };
-        const team = (m,side) => {
-            const user=m && m[side];
-            const explicit=m && m[side+"Name"];
-            return explicit || getClub(user) || "TBD";
-        };
-        const seed = (m,side) => (m && m[side+"Seed"]) || "";
+        const playerMap = Object.fromEntries((data.participants || []).map((p) => [p.username, p]));
 
-        const card=(m,i,placeholder=false)=>`
-          <article class="bracket-match ${placeholder?"bracket-placeholder":""}">
-            <div class="bracket-match-label">MATCH ${i+1} · TWO LEGS</div>
-            <div class="leg-head"><span>TEAM</span><span>L1</span><span>L2</span><span>AGG</span></div>
-            ${["home","away"].map(side=>`
-              <div class="bracket-team">
-                <div class="team-main">${seed(m,side)?`<span class="bracket-seed">${seed(m,side)}</span>`:""}<span class="bracket-club">${team(m,side)}</span></div>
-                <span class="leg-score">${leg(m,1,side)}</span>
-                <span class="leg-score">${leg(m,2,side)}</span>
-                <span class="bracket-score">${agg(m,side)}</span>
-              </div>`).join("")}
-          </article>`;
+        const scoreText = (value) =>
+            value === null || value === undefined || value === "" ? "—" : String(value);
 
-        const blank=n=>Array.from({length:n},()=>({homeName:"TBD",awayName:"TBD"}));
-        const round=(cls,kicker,title,matches,final=false)=>`
-          <section class="bracket-column ${cls}">
-            <div class="bracket-round-title"><small>${kicker}</small><strong>${title}</strong></div>
-            <div class="bracket-round-matches">${matches.map((m,i)=>card(m,i,!m.home && !m.homeName)).join("")}</div>
-            ${final?`<div class="bracket-trophy">🏆<span>ARS CHAMPION</span></div>`:""}
-          </section>`;
+        const resolveName = (tie, side) => {
+            const username = tie?.[side];
+            if (username && playerMap[username]) return playerMap[username].club;
+            return tie?.[side === "home" ? "sourceHome" : "sourceAway"] || "TBD";
+        };
 
-        root.innerHTML=`
-          <div class="playoffs-head">
-            <div class="section-kicker">PLAYOFFS</div>
-            <h2 class="playoffs-title">ROAD TO <span>THE TROPHY</span></h2>
-            <p class="playoffs-subtitle">Two-leg ties · aggregate score decides the winner</p>
-          </div>
-          <div class="bracket-scroll"><div class="bracket-shell">
-            ${round("bracket-r16","ROUND OF 16","ROUND OF 16",r16)}
-            ${round("bracket-qf","QUARTERFINALS","QUARTERFINALS",blank(4))}
-            ${round("bracket-sf","SEMIFINALS","SEMIFINALS",blank(2))}
-            ${round("bracket-fn","FINAL","FINAL",blank(1),true)}
-          </div></div>`;
+        const resolveSeed = (tie, side) =>
+            tie?.[side === "home" ? "homeSeed" : "awaySeed"] || "";
+
+        const aggregate = (tie, side) => {
+            const key = side === "home" ? "homeScore" : "awayScore";
+            const a = tie?.leg1?.[key];
+            const b = tie?.leg2?.[key];
+            if (!Number.isFinite(a) || !Number.isFinite(b)) return "—";
+            return a + b;
+        };
+
+        const teamRow = (tie, side) => {
+            const seed = resolveSeed(tie, side);
+            const name = resolveName(tie, side);
+            const scoreKey = side === "home" ? "homeScore" : "awayScore";
+
+            return `
+                <div class="po-team-row">
+                    <div class="po-team">
+                        ${seed ? `<span class="po-seed">${escapeHTML(seed)}</span>` : `<span class="po-seed po-seed-muted">—</span>`}
+                        <strong>${escapeHTML(name)}</strong>
+                    </div>
+                    <span class="po-leg">${scoreText(tie?.leg1?.[scoreKey])}</span>
+                    <span class="po-leg">${scoreText(tie?.leg2?.[scoreKey])}</span>
+                    <span class="po-agg">${scoreText(aggregate(tie, side))}</span>
+                </div>
+            `;
+        };
+
+        const tieCard = (tie, index) => `
+            <article class="po-match-card">
+                <div class="po-match-top">
+                    <span>${escapeHTML(tie.code || `MATCH ${index + 1}`)}</span>
+                    <small>TWO LEGS</small>
+                </div>
+                <div class="po-columns">
+                    <span>TEAM</span><span>LEG 1</span><span>LEG 2</span><span>AGG</span>
+                </div>
+                ${teamRow(tie, "home")}
+                ${teamRow(tie, "away")}
+            </article>
+        `;
+
+        const roundColumn = (roundClass, englishTitle, shortTitle, matches) => `
+            <section class="po-round ${roundClass}">
+                <header class="po-round-title">
+                    <small>${englishTitle}</small>
+                    <strong>${shortTitle}</strong>
+                </header>
+                <div class="po-round-matches">
+                    ${(matches || []).map(tieCard).join("")}
+                </div>
+            </section>
+        `;
+
+        bracketRoot.innerHTML = `
+            ${roundColumn("po-r16", "ROUND OF 16", "1/8 FINAL", data.playoffs.roundOf16)}
+            ${roundColumn("po-qf", "QUARTERFINALS", "1/4 FINAL", data.playoffs.quarterfinals)}
+            ${roundColumn("po-sf", "SEMIFINALS", "1/2 FINAL", data.playoffs.semifinals)}
+            ${roundColumn("po-final", "FINAL", "FINAL", data.playoffs.final)}
+        `;
+
+        if (note) {
+            note.textContent = currentLanguage === "ru"
+                ? data.playoffs.noteRu
+                : data.playoffs.noteUk;
+        }
     }
+
     function renderAll() {
         applyStaticTranslations();
         renderLeagueInfo();

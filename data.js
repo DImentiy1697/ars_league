@@ -193,22 +193,58 @@ window.ARS_DATA = {
     },
 
     playoffs: {
-        stage: "1/8 ФІНАЛУ",
-        noteUk: "До 1/8 вийшли 1–2 місця всіх груп і 4 найактивніші треті місця. Два найменш активні треті місця вибули.",
-        noteRu: "В 1/8 вышли 1–2 места всех групп и 4 самых активных третьих места. Два наименее активных третьих места выбыли.",
-        eliminatedThirds: [
-            { seed: "3A", username: "@Lalitovv", club: "Borussia Dortmund 2", reason: "0 матчів" },
-            { seed: "3D", username: "@No_Name_KZ08", club: "Bayern Munich", reason: "1 матч" }
-        ],
+        stage: "ROUND OF 16",
+        format: "two_leg",
+        noteUk: "Кожна пара плей-оф грає два матчі. Переможець визначається за сумою двох матчів.",
+        noteRu: "Каждая пара плей-офф играет два матча. Победитель определяется по сумме двух матчей.",
+
         roundOf16: [
-            { homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway", homeScore: null, awayScore: null },
-            { homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan", homeScore: null, awayScore: null },
-            { homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza", homeScore: null, awayScore: null },
-            { homeSeed: "1D", home: "@MehrabyanRaffi", awaySeed: "2E", away: "@Liverpoolfc1892i", homeScore: null, awayScore: null },
-            { homeSeed: "1F", home: "@dimentiy19", awaySeed: "3C", away: "@terehjuve", homeScore: null, awayScore: null },
-            { homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66", homeScore: null, awayScore: null },
-            { homeSeed: "2C", home: "@kentyxa26", awaySeed: "2D", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
-            { homeSeed: "2A", home: "@shapus2", awaySeed: "3F", away: "@asvlss", homeScore: null, awayScore: null }
+            { code: "R16-1", homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-2", homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-3", homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-4", homeSeed: "1D", home: "@MehrabyanRaffi", awaySeed: "2E", away: "@Liverpoolfc1892i",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-5", homeSeed: "1F", home: "@dimentiy19", awaySeed: "3C", away: "@terehjuve",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-6", homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-7", homeSeed: "2C", home: "@kentyxa26", awaySeed: "2D", away: "@MishaBurkoveckii",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+
+            { code: "R16-8", homeSeed: "2A", home: "@shapus2", awaySeed: "3F", away: "@asvlss",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+        ],
+
+        quarterfinals: [
+            { code: "QF-1", sourceHome: "Winner R16-1", sourceAway: "Winner R16-2",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+            { code: "QF-2", sourceHome: "Winner R16-3", sourceAway: "Winner R16-4",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+            { code: "QF-3", sourceHome: "Winner R16-5", sourceAway: "Winner R16-6",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+            { code: "QF-4", sourceHome: "Winner R16-7", sourceAway: "Winner R16-8",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+        ],
+
+        semifinals: [
+            { code: "SF-1", sourceHome: "Winner QF-1", sourceAway: "Winner QF-2",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+            { code: "SF-2", sourceHome: "Winner QF-3", sourceAway: "Winner QF-4",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+        ],
+
+        final: [
+            { code: "FINAL", sourceHome: "Winner SF-1", sourceAway: "Winner SF-2",
+              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
         ]
     },
 

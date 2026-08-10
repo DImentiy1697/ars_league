@@ -2364,306 +2364,208 @@ footer {
 @media(max-width:760px){.playoffs-section{padding:62px 0 55px}.playoffs-head{margin-bottom:24px}.playoffs-title{font-size:38px}.playoffs-subtitle{font-size:12px}.bracket-scroll{padding-left:18px;padding-right:18px}.bracket-shell{min-width:1180px;grid-template-columns:330px 280px 250px 250px;gap:36px}.bracket-round-title{position:sticky;top:0}.bracket-team{min-height:40px}.bracket-club{font-size:12px}}
 
 
+
+
 /* =========================================================
-   ARS LEAGUE — PREMIUM PLAYOFF BRACKET v3
-   Desktop: full-width readable tournament tree
-   Mobile: clean vertical rounds, no horizontal overflow
+   ARS CHAMPIONS LEAGUE — TWO-LEG PLAYOFF BRACKET
+   One source of truth for desktop + mobile.
 ========================================================= */
-#playoffs.playoffs-section{
+.playoffs-section{
     position:relative;
-    padding:96px 0 110px;
     overflow:hidden;
+    padding:100px 0 110px;
     background:
-      radial-gradient(circle at 50% 2%,rgba(168,85,247,.18),transparent 34%),
-      radial-gradient(circle at 15% 45%,rgba(109,40,217,.08),transparent 30%),
-      linear-gradient(180deg,rgba(9,5,14,.25),rgba(7,5,9,.7));
+        radial-gradient(circle at 50% 0%, rgba(168,85,247,.18), transparent 32%),
+        radial-gradient(circle at 10% 55%, rgba(109,40,217,.08), transparent 28%),
+        linear-gradient(180deg, rgba(9,6,14,.65), rgba(7,5,9,.92));
 }
-#playoffs.playoffs-section::before{
-    content:"";
-    position:absolute; inset:0; pointer-events:none; opacity:.34;
+.playoff-bg-grid{
+    position:absolute; inset:0; pointer-events:none; opacity:.26;
     background-image:
-      linear-gradient(rgba(192,132,252,.035) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(192,132,252,.035) 1px,transparent 1px);
-    background-size:32px 32px;
-    mask-image:linear-gradient(to bottom,black,transparent 94%);
+        linear-gradient(rgba(192,132,252,.04) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(192,132,252,.04) 1px,transparent 1px);
+    background-size:34px 34px;
+    mask-image:linear-gradient(to bottom,black,transparent 96%);
 }
-#playoffs .playoffs-head{
-    position:relative; z-index:2;
-    width:min(1500px,92vw);
-    margin:0 auto 46px;
-    text-align:center;
-}
-#playoffs .playoffs-head .section-kicker{
-    display:inline-flex; align-items:center; gap:9px;
-    color:#c084fc; font-size:12px; font-weight:800;
-    letter-spacing:.24em; text-transform:uppercase;
-}
-#playoffs .playoffs-head .section-kicker::before,
-#playoffs .playoffs-head .section-kicker::after{
-    content:""; width:34px; height:1px;
-    background:linear-gradient(90deg,transparent,#a855f7);
-}
-#playoffs .playoffs-head .section-kicker::after{
-    background:linear-gradient(90deg,#a855f7,transparent);
-}
-#playoffs .playoffs-title{
-    margin:12px 0 0;
+.playoff-heading{position:relative;z-index:2;text-align:center;margin-bottom:34px}
+.playoff-heading h2{
+    margin-top:12px;
     font-family:"Orbitron",sans-serif;
-    font-size:clamp(42px,4.6vw,76px);
+    font-size:clamp(42px,5vw,76px);
     line-height:1;
     letter-spacing:-.045em;
-    text-transform:uppercase;
 }
-#playoffs .playoffs-title span{
-    color:#c084fc;
-    text-shadow:0 0 35px rgba(168,85,247,.42);
-}
-#playoffs .playoffs-subtitle{
-    margin:16px auto 0;
+.playoff-heading h2 span{color:#c084fc;text-shadow:0 0 28px rgba(168,85,247,.4)}
+.playoff-description{
+    margin:14px auto 0;
+    max-width:760px;
     color:rgba(255,255,255,.62);
-    font-size:16px; font-weight:600; letter-spacing:.08em;
+    font-size:17px;
+    font-weight:600;
 }
+.playoff-stage-nav{
+    position:relative;z-index:2;
+    width:min(1700px,96vw);
+    margin:0 auto 18px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+    color:#c084fc;
+    font-family:"Orbitron",sans-serif;
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.12em;
+}
+.playoff-stage-nav span{padding:0 8px 12px;border-bottom:1px solid rgba(192,132,252,.25)}
 
-#playoffs .bracket-scroll{
-    position:relative; z-index:2;
-    width:100%;
-    overflow:visible;
-    padding:0;
-}
-#playoffs .bracket-shell{
-    width:min(1760px,95vw);
-    min-width:0;
+.playoff-bracket-wrap{position:relative;z-index:2;width:100%;overflow:visible}
+.playoff-bracket{
+    width:min(1760px,96vw);
     margin:0 auto;
     display:grid;
-    grid-template-columns:minmax(300px,1.18fr) minmax(270px,1fr) minmax(270px,1fr) minmax(270px,1fr);
-    gap:clamp(22px,2.2vw,44px);
+    grid-template-columns:minmax(315px,1.18fr) minmax(290px,1fr) minmax(290px,1fr) minmax(290px,1fr);
+    gap:clamp(24px,2vw,42px);
     align-items:stretch;
 }
-#playoffs .bracket-column{
-    min-width:0;
-    display:flex;
-    flex-direction:column;
+.po-round{min-width:0;display:flex;flex-direction:column}
+.po-round-title{
+    min-height:64px;
+    padding:10px 8px 15px;
+    border-bottom:1px solid rgba(192,132,252,.26);
+    display:flex;flex-direction:column;justify-content:flex-end;
 }
-#playoffs .bracket-round-title{
-    height:74px;
-    margin:0 0 20px;
-    padding:0 8px 16px;
-    display:flex; flex-direction:column; justify-content:flex-end;
-    text-align:left;
-    border-bottom:1px solid rgba(192,132,252,.3);
-    position:relative;
-}
-#playoffs .bracket-round-title::after{
-    content:""; position:absolute; left:0; bottom:-1px;
-    width:74px; height:2px;
-    background:#a855f7;
-    box-shadow:0 0 14px rgba(168,85,247,.7);
-}
-#playoffs .bracket-round-title small{
-    color:#a855f7;
-    font-size:10px; font-weight:800; letter-spacing:.23em;
-}
-#playoffs .bracket-round-title strong{
-    margin-top:6px;
-    font-family:"Orbitron",sans-serif;
-    font-size:17px; letter-spacing:.04em;
-}
+.po-round-title small{color:#a855f7;font-size:9px;font-weight:800;letter-spacing:.2em}
+.po-round-title strong{margin-top:5px;font-family:"Orbitron",sans-serif;font-size:16px}
+.po-round-matches{flex:1;display:flex;flex-direction:column;justify-content:space-around;gap:14px}
+.po-qf .po-round-matches{padding:62px 0}
+.po-sf .po-round-matches{padding:190px 0}
+.po-final .po-round-matches{padding:390px 0 250px}
 
-#playoffs .bracket-round-matches{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    gap:16px;
-}
-#playoffs .bracket-match{
+.po-match-card{
     position:relative;
-    overflow:visible;
-    border:1px solid rgba(192,132,252,.32);
-    border-radius:17px;
-    background:
-      linear-gradient(145deg,rgba(48,23,67,.92),rgba(14,9,21,.96));
-    box-shadow:
-      0 18px 45px rgba(0,0,0,.28),
-      inset 0 1px 0 rgba(255,255,255,.05),
-      0 0 0 1px rgba(168,85,247,.025);
-    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+    overflow:hidden;
+    border:1px solid rgba(192,132,252,.38);
+    border-radius:16px;
+    background:linear-gradient(145deg,rgba(48,23,67,.96),rgba(13,9,20,.97));
+    box-shadow:0 18px 42px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.05);
 }
-#playoffs .bracket-match:hover{
-    transform:translateY(-2px);
-    border-color:rgba(192,132,252,.58);
-    box-shadow:0 22px 55px rgba(0,0,0,.34),0 0 28px rgba(168,85,247,.09);
-}
-#playoffs .bracket-match::after{
+.po-match-card::after{
     content:"";
     position:absolute;
-    z-index:-1;
-    right:calc(-1 * clamp(22px,2.2vw,44px));
+    right:calc(-1 * clamp(24px,2vw,42px));
     top:50%;
-    width:clamp(22px,2.2vw,44px);
+    width:clamp(24px,2vw,42px);
     height:1px;
-    background:linear-gradient(90deg,rgba(192,132,252,.7),rgba(192,132,252,.12));
+    background:linear-gradient(90deg,rgba(192,132,252,.66),rgba(192,132,252,.08));
 }
-#playoffs .bracket-fn .bracket-match::after{display:none}
-#playoffs .bracket-match-label{
-    display:block;
-    padding:10px 14px 7px;
-    color:rgba(216,180,254,.62);
-    font-size:9px; font-weight:800; letter-spacing:.19em;
+.po-final .po-match-card::after{display:none}
+.po-match-top{
+    height:32px;
+    padding:0 12px;
+    display:flex;align-items:center;justify-content:space-between;
+    color:#d8b4fe;
+    font-size:9px;font-weight:800;letter-spacing:.13em;
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
-#playoffs .bracket-team{
+.po-match-top small{color:rgba(255,255,255,.42);font-size:8px}
+.po-columns,
+.po-team-row{
     display:grid;
-    grid-template-columns:46px minmax(0,1fr) 34px;
+    grid-template-columns:minmax(0,1fr) 48px 48px 48px;
+    gap:4px;
     align-items:center;
-    min-height:50px;
-    padding:0 13px;
+}
+.po-columns{
+    padding:7px 11px 5px;
+    color:rgba(255,255,255,.36);
+    font-size:8px;font-weight:800;letter-spacing:.08em;
+}
+.po-columns span:not(:first-child){text-align:center}
+.po-team-row{
+    min-height:53px;
+    padding:0 11px;
     border-top:1px solid rgba(255,255,255,.07);
 }
-#playoffs .bracket-seed{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:36px; min-height:30px;
-    border:1px solid rgba(192,132,252,.24);
+.po-team{min-width:0;display:flex;align-items:center;gap:9px}
+.po-team strong{
+    min-width:0;
+    color:#fff;
+    font-size:clamp(14px,.9vw,17px);
+    line-height:1.08;
+    white-space:normal;
+    overflow-wrap:anywhere;
+}
+.po-seed{
+    flex:0 0 38px;
+    min-height:31px;
+    display:inline-flex;align-items:center;justify-content:center;
+    border:1px solid rgba(192,132,252,.25);
     border-radius:9px;
-    background:rgba(168,85,247,.1);
+    background:rgba(168,85,247,.12);
     color:#d8b4fe;
     font-family:"Orbitron",sans-serif;
-    font-size:11px; font-weight:800;
+    font-size:10px;font-weight:800;
 }
-#playoffs .bracket-club{
-    min-width:0;
-    padding-right:8px;
-    color:#fff;
-    font-size:clamp(14px,.95vw,17px);
-    font-weight:700;
-    white-space:normal;
-    overflow:visible;
-    text-overflow:clip;
-    line-height:1.08;
-}
-#playoffs .bracket-score{
-    text-align:right;
-    color:#fff;
-    font-family:"Orbitron",sans-serif;
-    font-size:18px; font-weight:800;
-}
-#playoffs .bracket-placeholder{
-    opacity:.72;
-    border-style:dashed;
-}
-#playoffs .bracket-placeholder .bracket-club{
-    color:rgba(255,255,255,.48);
-}
-#playoffs .bracket-qf .bracket-round-matches{padding:52px 0}
-#playoffs .bracket-sf .bracket-round-matches{padding:150px 0}
-#playoffs .bracket-fn .bracket-round-matches{padding:270px 0 150px}
-#playoffs .bracket-final{
-    border-color:rgba(216,180,254,.58);
-    box-shadow:0 0 45px rgba(168,85,247,.12),0 20px 55px rgba(0,0,0,.3);
-}
-#playoffs .bracket-trophy{
-    margin-top:34px;
+.po-seed-muted{opacity:.4}
+.po-leg,.po-agg{
     text-align:center;
-    font-size:54px;
-    filter:drop-shadow(0 0 18px rgba(250,204,21,.28));
-}
-#playoffs .bracket-trophy span{
-    display:block;
-    margin-top:10px;
-    color:rgba(255,255,255,.55);
     font-family:"Orbitron",sans-serif;
-    font-size:10px; font-weight:800; letter-spacing:.23em;
+    font-size:13px;font-weight:800;
+}
+.po-leg{color:rgba(255,255,255,.78)}
+.po-agg{color:#d8b4fe;font-size:15px;text-shadow:0 0 14px rgba(168,85,247,.3)}
+.playoff-note{
+    position:relative;z-index:2;
+    margin-top:28px;
+    padding:14px 18px;
+    border:1px solid rgba(192,132,252,.18);
+    border-radius:14px;
+    background:rgba(20,13,28,.55);
+    color:rgba(255,255,255,.58);
+    text-align:center;
+    font-size:14px;
 }
 
-/* Medium screens: keep the complete bracket readable without shrinking text. */
-@media (max-width:1280px) and (min-width:761px){
-    #playoffs .bracket-shell{
-        width:96vw;
-        grid-template-columns:minmax(245px,1.15fr) repeat(3,minmax(220px,1fr));
+/* Wide-but-not-ultrawide */
+@media (max-width:1320px) and (min-width:761px){
+    .playoff-bracket{
+        grid-template-columns:minmax(260px,1.15fr) repeat(3,minmax(230px,1fr));
         gap:18px;
     }
-    #playoffs .bracket-match::after{right:-18px;width:18px}
-    #playoffs .bracket-team{grid-template-columns:40px minmax(0,1fr) 28px;padding:0 10px}
-    #playoffs .bracket-seed{width:32px;font-size:10px}
-    #playoffs .bracket-club{font-size:14px}
+    .po-match-card::after{right:-18px;width:18px}
+    .po-columns,.po-team-row{grid-template-columns:minmax(0,1fr) 39px 39px 42px}
+    .po-team-row{padding:0 9px}
+    .po-columns{padding-left:9px;padding-right:9px}
+    .po-team{gap:6px}
+    .po-seed{flex-basis:32px}
+    .po-team strong{font-size:13px}
 }
 
-/* PHONE: not a squeezed desktop tree. Each round is a full-width premium block. */
+/* Mobile: every stage becomes its own full-width block, no squeezed horizontal tree. */
 @media (max-width:760px){
-    #playoffs.playoffs-section{padding:64px 0 72px;overflow:hidden}
-    #playoffs .playoffs-head{width:calc(100% - 32px);margin-bottom:28px}
-    #playoffs .playoffs-title{font-size:clamp(34px,11vw,48px);line-height:1.02}
-    #playoffs .playoffs-subtitle{font-size:13px;line-height:1.5}
-    #playoffs .bracket-scroll{overflow:visible;padding:0 16px}
-    #playoffs .bracket-shell{
-        width:100%;
-        min-width:0;
-        display:block;
-        margin:0;
-    }
-    #playoffs .bracket-column{
-        width:100%;
-        margin:0 0 46px;
-    }
-    #playoffs .bracket-round-title{
-        height:auto;
-        min-height:58px;
-        margin-bottom:15px;
-        padding:0 4px 13px;
-        position:static;
-    }
-    #playoffs .bracket-round-title strong{font-size:16px}
-    #playoffs .bracket-round-matches,
-    #playoffs .bracket-qf .bracket-round-matches,
-    #playoffs .bracket-sf .bracket-round-matches,
-    #playoffs .bracket-fn .bracket-round-matches{
-        padding:0;
-        gap:13px;
-    }
-    #playoffs .bracket-match{
-        width:100%;
-        border-radius:16px;
-        overflow:hidden;
-    }
-    #playoffs .bracket-match::after{display:none}
-    #playoffs .bracket-match-label{padding:10px 13px 7px;font-size:9px}
-    #playoffs .bracket-team{
-        grid-template-columns:48px minmax(0,1fr) 38px;
-        min-height:54px;
-        padding:0 13px;
-    }
-    #playoffs .bracket-seed{width:38px;min-height:32px;font-size:11px}
-    #playoffs .bracket-club{
-        font-size:16px;
-        white-space:normal;
-        overflow:visible;
-        line-height:1.08;
-    }
-    #playoffs .bracket-score{font-size:18px}
-    #playoffs .bracket-trophy{margin:24px 0 0;font-size:50px}
-}
-
-/* Very small phones */
-@media (max-width:390px){
-    #playoffs .bracket-scroll{padding:0 12px}
-    #playoffs .bracket-team{grid-template-columns:44px minmax(0,1fr) 32px;padding:0 10px}
-    #playoffs .bracket-club{font-size:15px}
-}
-
-/* ARS two-leg bracket */
-#playoffs .leg-head{display:grid;grid-template-columns:minmax(0,1fr) 36px 36px 44px;gap:4px;padding:0 12px 6px;color:rgba(216,180,254,.5);font-size:8px;font-weight:800;letter-spacing:.1em}
-#playoffs .leg-head span:not(:first-child){text-align:center}
-#playoffs .bracket-team{display:grid!important;grid-template-columns:minmax(0,1fr) 36px 36px 44px!important;gap:4px;min-height:56px;padding:0 12px!important}
-#playoffs .team-main{min-width:0;display:flex;align-items:center;gap:8px}
-#playoffs .team-main .bracket-seed{flex:0 0 36px}
-#playoffs .bracket-club{min-width:0;font-size:clamp(13px,.86vw,16px)!important;line-height:1.08;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
-#playoffs .leg-score,#playoffs .bracket-score{text-align:center;font-family:"Orbitron",sans-serif;font-size:13px;font-weight:800}
-#playoffs .bracket-score{color:#d8b4fe;font-size:15px}
-@media(max-width:760px){
- #playoffs .leg-head{grid-template-columns:minmax(0,1fr) 30px 30px 36px;padding:0 9px 6px}
- #playoffs .bracket-team{grid-template-columns:minmax(0,1fr) 30px 30px 36px!important;padding:0 9px!important;min-height:58px}
- #playoffs .team-main{gap:6px}
- #playoffs .team-main .bracket-seed{flex-basis:32px;width:32px}
- #playoffs .bracket-club{font-size:14px!important}
- #playoffs .leg-score{font-size:11px}
- #playoffs .bracket-score{font-size:12px}
+    .playoffs-section{padding:70px 0 78px}
+    .playoff-heading{width:calc(100% - 28px);margin:0 auto 28px}
+    .playoff-heading h2{font-size:clamp(34px,10vw,48px)}
+    .playoff-description{font-size:14px;line-height:1.45}
+    .playoff-stage-nav{display:none}
+    .playoff-bracket-wrap{padding:0 14px;overflow:visible}
+    .playoff-bracket{width:100%;display:block}
+    .po-round{width:100%;margin-bottom:44px}
+    .po-round-title{min-height:auto;padding:0 4px 12px;margin-bottom:13px}
+    .po-round-title strong{font-size:16px}
+    .po-round-matches,
+    .po-qf .po-round-matches,
+    .po-sf .po-round-matches,
+    .po-final .po-round-matches{padding:0;gap:13px}
+    .po-match-card{width:100%;border-radius:15px}
+    .po-match-card::after{display:none}
+    .po-columns,.po-team-row{grid-template-columns:minmax(0,1fr) 38px 38px 42px}
+    .po-columns{padding:7px 9px 5px;font-size:7px}
+    .po-team-row{min-height:56px;padding:0 9px}
+    .po-team{gap:7px}
+    .po-seed{flex-basis:34px;min-height:30px;font-size:9px}
+    .po-team strong{font-size:14px}
+    .po-leg{font-size:12px}
+    .po-agg{font-size:13px}
+    .playoff-note{width:calc(100% - 28px);font-size:13px}
 }
