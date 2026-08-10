@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="container playoffs-head">
                 <span class="section-kicker">ARS CHAMPIONS LEAGUE · PLAYOFFS</span>
                 <h2 class="playoffs-title">ШЛЯХ ДО <span>ТРОФЕЮ</span></h2>
-                <p class="playoffs-subtitle">16 команд. 4 раунди. 1 чемпіон.</p>
+                <p class="playoffs-subtitle">16 команд · 4 раунди · один шлях до титулу</p>
             </div>
             <div class="bracket-scroll">
                 <div class="bracket-shell">
