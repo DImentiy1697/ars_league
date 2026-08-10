@@ -117,41 +117,41 @@ window.ARS_DATA = {
             { home: "@Mbappe_501", away: "@spakserega4", homeScore: null, awayScore: null },
             { home: "@Limbo_66", away: "@Oraxan", homeScore: null, awayScore: null },
             { home: "@Limbo_66", away: "@spakserega4", homeScore: 2, awayScore: 2 },
-            { home: "@Oraxan", away: "@spakserega4", homeScore: null, awayScore: null },
+            { home: "@Oraxan", away: "@spakserega4", homeScore: 2, awayScore: 5 },
 
             { home: "@Limbo_66", away: "@Mbappe_501", homeScore: null, awayScore: null },
             { home: "@Oraxan", away: "@Mbappe_501", homeScore: null, awayScore: null },
             { home: "@spakserega4", away: "@Mbappe_501", homeScore: null, awayScore: null },
             { home: "@Oraxan", away: "@Limbo_66", homeScore: null, awayScore: null },
             { home: "@spakserega4", away: "@Limbo_66", homeScore: 1, awayScore: 3 },
-            { home: "@spakserega4", away: "@Oraxan", homeScore: null, awayScore: null }
+            { home: "@spakserega4", away: "@Oraxan", homeScore: 3, awayScore: 1 }
         ],
 
         C: [
-            { home: "@WondySale", away: "@destrooooo12", homeScore: null, awayScore: null },
+            { home: "@WondySale", away: "@destrooooo12", homeScore: 3, awayScore: 1 },
             { home: "@WondySale", away: "@kentyxa26", homeScore: 3, awayScore: 1 },
             { home: "@WondySale", away: "@terehjuve", homeScore: 4, awayScore: 1 },
-            { home: "@destrooooo12", away: "@kentyxa26", homeScore: null, awayScore: null },
-            { home: "@destrooooo12", away: "@terehjuve", homeScore: null, awayScore: null },
-            { home: "@kentyxa26", away: "@terehjuve", homeScore: null, awayScore: null },
+            { home: "@destrooooo12", away: "@kentyxa26", homeScore: 0, awayScore: 4 },
+            { home: "@destrooooo12", away: "@terehjuve", homeScore: 2, awayScore: 3},
+            { home: "@kentyxa26", away: "@terehjuve", homeScore: 0, awayScore: 2 },
 
-            { home: "@destrooooo12", away: "@WondySale", homeScore: null, awayScore: null },
+            { home: "@destrooooo12", away: "@WondySale", homeScore: 1, awayScore: 2 },
             { home: "@kentyxa26", away: "@WondySale", homeScore: 1, awayScore: 1 },
             { home: "@terehjuve", away: "@WondySale", homeScore: 1, awayScore: 5 },
-            { home: "@kentyxa26", away: "@destrooooo12", homeScore: null, awayScore: null },
-            { home: "@terehjuve", away: "@destrooooo12", homeScore: null, awayScore: null },
-            { home: "@terehjuve", away: "@kentyxa26", homeScore: null, awayScore: null }
+            { home: "@kentyxa26", away: "@destrooooo12", homeScore: 2, awayScore: 0 },
+            { home: "@terehjuve", away: "@destrooooo12", homeScore: 4, awayScore: 2 },
+            { home: "@terehjuve", away: "@kentyxa26", homeScore: 0 , awayScore: 3 }
         ],
 
         D: [
-            { home: "@MishaBurkoveckii", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
+            { home: "@MishaBurkoveckii", away: "@MehrabyanRaffi", homeScore: 2, awayScore: 3 },
             { home: "@MishaBurkoveckii", away: "@tsavaaaa", homeScore: null, awayScore: null },
             { home: "@MishaBurkoveckii", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
-            { home: "@MehrabyanRaffi", away: "@tsavaaaa", homeScore: null, awayScore: null },
+            { home: "@MehrabyanRaffi", away: "@tsavaaaa", homeScore: 3, awayScore: 0 },
             { home: "@MehrabyanRaffi", away: "@No_Name_KZ08", homeScore: 2, awayScore: 0 },
             { home: "@tsavaaaa", away: "@No_Name_KZ08", homeScore: null, awayScore: null },
 
-            { home: "@MehrabyanRaffi", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
+            { home: "@MehrabyanRaffi", away: "@MishaBurkoveckii", homeScore: 1 , awayScore: 0 },
             { home: "@tsavaaaa", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
             { home: "@No_Name_KZ08", away: "@MishaBurkoveckii", homeScore: null, awayScore: null },
             { home: "@tsavaaaa", away: "@MehrabyanRaffi", homeScore: null, awayScore: null },
