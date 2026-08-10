@@ -221,64 +221,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function renderPlayoffs() {
-        if (!data.playoffs || !Array.isArray(data.playoffs.roundOf16)) return;
-        const groupsSection = document.querySelector("#groups") || document.querySelector(".groups-section");
-        if (!groupsSection) return;
-        let section = document.querySelector("#playoffs");
-        if (!section) {
-            section = document.createElement("section");
-            section.id = "playoffs";
-            section.className = "playoffs-section section";
-            groupsSection.insertAdjacentElement("afterend", section);
-        }
-        const clubOf = (username) => {
-            const p = (data.participants || []).find(x => x.username === username);
-            return p ? p.club : username;
-        };
-        const team = (seed, username, score = null) => `
-            <div class="bracket-team">
-                <span class="bracket-seed">${seed || ""}</span>
-                <span class="bracket-club">${clubOf(username)}</span>
-                <span class="bracket-score">${score ?? "—"}</span>
-            </div>`;
-        const match = (m, label) => `
-            <div class="bracket-match">
-                <span class="bracket-match-label">${label}</span>
-                ${team(m.homeSeed, m.home, m.homeScore)}
-                ${team(m.awaySeed, m.away, m.awayScore)}
-            </div>`;
-        const r16 = data.playoffs.roundOf16;
-        const qf = [0,1,2,3].map(i => `<div class="bracket-match bracket-placeholder"><span class="bracket-match-label">QF ${i+1}</span>${team("", "TBD")}${team("", "TBD")}</div>`).join("");
-        const sf = [0,1].map(i => `<div class="bracket-match bracket-placeholder"><span class="bracket-match-label">SF ${i+1}</span>${team("", "TBD")}${team("", "TBD")}</div>`).join("");
-        const final = `<div class="bracket-match bracket-final bracket-placeholder"><span class="bracket-match-label">GRAND FINAL</span>${team("", "TBD")}${team("", "TBD")}</div>`;
-        section.innerHTML = `
-            <div class="container playoffs-head">
-                <span class="section-kicker">ARS CHAMPIONS LEAGUE · PLAYOFFS</span>
-                <h2 class="playoffs-title">ШЛЯХ ДО <span>ТРОФЕЮ</span></h2>
-                <p class="playoffs-subtitle">16 команд · 4 раунди · один шлях до титулу</p>
-            </div>
-            <div class="bracket-scroll">
-                <div class="bracket-shell">
-                    <div class="bracket-column bracket-r16">
-                        <div class="bracket-round-title"><small>ROUND OF 16</small><strong>1/8 ФІНАЛУ</strong></div>
-                        <div class="bracket-round-matches">${r16.map((m,i)=>match(m, `MATCH ${i+1}`)).join("")}</div>
-                    </div>
-                    <div class="bracket-column bracket-qf">
-                        <div class="bracket-round-title"><small>QUARTERFINALS</small><strong>1/4 ФІНАЛУ</strong></div>
-                        <div class="bracket-round-matches">${qf}</div>
-                    </div>
-                    <div class="bracket-column bracket-sf">
-                        <div class="bracket-round-title"><small>SEMIFINALS</small><strong>1/2 ФІНАЛУ</strong></div>
-                        <div class="bracket-round-matches">${sf}</div>
-                    </div>
-                    <div class="bracket-column bracket-fn">
-                        <div class="bracket-round-title"><small>FINAL</small><strong>ФІНАЛ</strong></div>
-                        <div class="bracket-round-matches">${final}<div class="bracket-trophy">🏆<span>ARS CHAMPION</span></div></div>
-                    </div>
-                </div>
-            </div>`;
-    }
+        const root = document.getElementById("playoffs");
+        if (!root) return;
+        const p = DATA.playoffs || {};
+        const r16 = p.roundOf16 || [];
 
+        const getClub = (username) => {
+            const u = (DATA.participants || []).find(x => x.username === username);
+            return u ? u.club : (username || "TBD");
+        };
+        const leg = (m, n, side) => {
+            const keys = n === 1
+              ? (side === "home" ? ["homeScore","homeScore1"] : ["awayScore","awayScore1"])
+              : (side === "home" ? ["homeScore2","secondHomeScore"] : ["awayScore2","secondAwayScore"]);
+            for (const k of keys) if (m && m[k] !== undefined && m[k] !== null) return m[k];
+            return "–";
+        };
+        const agg = (m, side) => {
+            const a=leg(m,1,side), b=leg(m,2,side);
+            return (a==="–" || b==="–") ? "–" : Number(a)+Number(b);
+        };
+        const team = (m,side) => {
+            const user=m && m[side];
+            const explicit=m && m[side+"Name"];
+            return explicit || getClub(user) || "TBD";
+        };
+        const seed = (m,side) => (m && m[side+"Seed"]) || "";
+
+        const card=(m,i,placeholder=false)=>`
+          <article class="bracket-match ${placeholder?"bracket-placeholder":""}">
+            <div class="bracket-match-label">MATCH ${i+1} · TWO LEGS</div>
+            <div class="leg-head"><span>TEAM</span><span>L1</span><span>L2</span><span>AGG</span></div>
+            ${["home","away"].map(side=>`
+              <div class="bracket-team">
+                <div class="team-main">${seed(m,side)?`<span class="bracket-seed">${seed(m,side)}</span>`:""}<span class="bracket-club">${team(m,side)}</span></div>
+                <span class="leg-score">${leg(m,1,side)}</span>
+                <span class="leg-score">${leg(m,2,side)}</span>
+                <span class="bracket-score">${agg(m,side)}</span>
+              </div>`).join("")}
+          </article>`;
+
+        const blank=n=>Array.from({length:n},()=>({homeName:"TBD",awayName:"TBD"}));
+        const round=(cls,kicker,title,matches,final=false)=>`
+          <section class="bracket-column ${cls}">
+            <div class="bracket-round-title"><small>${kicker}</small><strong>${title}</strong></div>
+            <div class="bracket-round-matches">${matches.map((m,i)=>card(m,i,!m.home && !m.homeName)).join("")}</div>
+            ${final?`<div class="bracket-trophy">🏆<span>ARS CHAMPION</span></div>`:""}
+          </section>`;
+
+        root.innerHTML=`
+          <div class="playoffs-head">
+            <div class="section-kicker">PLAYOFFS</div>
+            <h2 class="playoffs-title">ROAD TO <span>THE TROPHY</span></h2>
+            <p class="playoffs-subtitle">Two-leg ties · aggregate score decides the winner</p>
+          </div>
+          <div class="bracket-scroll"><div class="bracket-shell">
+            ${round("bracket-r16","ROUND OF 16","ROUND OF 16",r16)}
+            ${round("bracket-qf","QUARTERFINALS","QUARTERFINALS",blank(4))}
+            ${round("bracket-sf","SEMIFINALS","SEMIFINALS",blank(2))}
+            ${round("bracket-fn","FINAL","FINAL",blank(1),true)}
+          </div></div>`;
+    }
     function renderAll() {
         applyStaticTranslations();
         renderLeagueInfo();

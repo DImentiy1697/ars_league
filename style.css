@@ -2648,3 +2648,22 @@ footer {
     #playoffs .bracket-team{grid-template-columns:44px minmax(0,1fr) 32px;padding:0 10px}
     #playoffs .bracket-club{font-size:15px}
 }
+
+/* ARS two-leg bracket */
+#playoffs .leg-head{display:grid;grid-template-columns:minmax(0,1fr) 36px 36px 44px;gap:4px;padding:0 12px 6px;color:rgba(216,180,254,.5);font-size:8px;font-weight:800;letter-spacing:.1em}
+#playoffs .leg-head span:not(:first-child){text-align:center}
+#playoffs .bracket-team{display:grid!important;grid-template-columns:minmax(0,1fr) 36px 36px 44px!important;gap:4px;min-height:56px;padding:0 12px!important}
+#playoffs .team-main{min-width:0;display:flex;align-items:center;gap:8px}
+#playoffs .team-main .bracket-seed{flex:0 0 36px}
+#playoffs .bracket-club{min-width:0;font-size:clamp(13px,.86vw,16px)!important;line-height:1.08;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+#playoffs .leg-score,#playoffs .bracket-score{text-align:center;font-family:"Orbitron",sans-serif;font-size:13px;font-weight:800}
+#playoffs .bracket-score{color:#d8b4fe;font-size:15px}
+@media(max-width:760px){
+ #playoffs .leg-head{grid-template-columns:minmax(0,1fr) 30px 30px 36px;padding:0 9px 6px}
+ #playoffs .bracket-team{grid-template-columns:minmax(0,1fr) 30px 30px 36px!important;padding:0 9px!important;min-height:58px}
+ #playoffs .team-main{gap:6px}
+ #playoffs .team-main .bracket-seed{flex-basis:32px;width:32px}
+ #playoffs .bracket-club{font-size:14px!important}
+ #playoffs .leg-score{font-size:11px}
+ #playoffs .bracket-score{font-size:12px}
+}

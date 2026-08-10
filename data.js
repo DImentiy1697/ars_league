@@ -24,73 +24,73 @@ window.ARS_DATA = {
     },
 
     participants: [
-        { username: "@dimentiy19", club: "Реал Мадрид" },
-        { username: "@Mbappe_501", club: "ПСЖ" },
-        { username: "@MehrabyanRaffi", club: "Барселона" },
-        { username: "@Vetal6h", club: "Милан" },
-        { username: "@kentyxa26", club: "МЮ" },
-        { username: "@Viteaqa", club: "Арсенал" },
-        { username: "@Limbo_66", club: "Реал Мадрид 2" },
-        { username: "@FCSMilovereal", club: "ПСЖ 2" },
-        { username: "@WondySale", club: "Манчестер Сити" },
-        { username: "@asvlss", club: "Манчестер Сити 2" },
-        { username: "@spakserega4", club: "Барселона 2" },
-        { username: "@terehjuve", club: "Ювентус" },
-        { username: "@shapus2", club: "Ювентус 2" },
-        { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
-        { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
-        { username: "@No_Name_KZ08", club: "Бавария" },
-        { username: "@Andfoza", club: "Ливерпуль" },
-        { username: "@Yeuwubs", club: "Базель" },
-        { username: "@Oraxan", club: "Ливерпуль 2" },
-        { username: "@tsavaaaa", club: "Атлетико Мадрид" },
-        { username: "@V_llaa_d", club: "Лилль" },
-        { username: "@finallygetaway", club: "Интер" },
-        { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
-        { username: "@destrooooo12", club: "Бавария 2" }
+        { username: "@dimentiy19", club: "Real Madrid" },
+        { username: "@Mbappe_501", club: "PSG" },
+        { username: "@MehrabyanRaffi", club: "Barcelona" },
+        { username: "@Vetal6h", club: "AC Milan" },
+        { username: "@kentyxa26", club: "Manchester United" },
+        { username: "@Viteaqa", club: "Arsenal" },
+        { username: "@Limbo_66", club: "Real Madrid 2" },
+        { username: "@FCSMilovereal", club: "PSG 2" },
+        { username: "@WondySale", club: "Manchester City" },
+        { username: "@asvlss", club: "Manchester City 2" },
+        { username: "@spakserega4", club: "Barcelona 2" },
+        { username: "@terehjuve", club: "Juventus" },
+        { username: "@shapus2", club: "Juventus 2" },
+        { username: "@MishaBurkoveckii", club: "Borussia Dortmund" },
+        { username: "@Lalitovv", club: "Borussia Dortmund 2" },
+        { username: "@No_Name_KZ08", club: "Bayern Munich" },
+        { username: "@Andfoza", club: "Liverpool" },
+        { username: "@Yeuwubs", club: "Basel" },
+        { username: "@Oraxan", club: "Liverpool 2" },
+        { username: "@tsavaaaa", club: "Atletico Madrid" },
+        { username: "@V_llaa_d", club: "Lille" },
+        { username: "@finallygetaway", club: "Inter Milan" },
+        { username: "@Liverpoolfc1892i", club: "Arsenal 2" },
+        { username: "@destrooooo12", club: "Bayern Munich 2" }
     ],
 
     groups: {
         A: [
-            { username: "@shapus2", club: "Ювентус 2" },
-            { username: "@FCSMilovereal", club: "ПСЖ 2" },
-            { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
-            { username: "@V_llaa_d", club: "Лилль" }
+            { username: "@shapus2", club: "Juventus 2" },
+            { username: "@FCSMilovereal", club: "PSG 2" },
+            { username: "@Lalitovv", club: "Borussia Dortmund 2" },
+            { username: "@V_llaa_d", club: "Lille" }
         ],
 
         B: [
-            { username: "@Mbappe_501", club: "ПСЖ" },
-            { username: "@Limbo_66", club: "Реал Мадрид 2" },
-            { username: "@Oraxan", club: "Ливерпуль 2" },
-            { username: "@spakserega4", club: "Барселона 2" }
+            { username: "@Mbappe_501", club: "PSG" },
+            { username: "@Limbo_66", club: "Real Madrid 2" },
+            { username: "@Oraxan", club: "Liverpool 2" },
+            { username: "@spakserega4", club: "Barcelona 2" }
         ],
 
         C: [
-            { username: "@WondySale", club: "Манчестер Сити" },
-            { username: "@destrooooo12", club: "Бавария 2" },
-            { username: "@kentyxa26", club: "МЮ" },
-            { username: "@terehjuve", club: "Ювентус" }
+            { username: "@WondySale", club: "Manchester City" },
+            { username: "@destrooooo12", club: "Bayern Munich 2" },
+            { username: "@kentyxa26", club: "Manchester United" },
+            { username: "@terehjuve", club: "Juventus" }
         ],
 
         D: [
-            { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
-            { username: "@MehrabyanRaffi", club: "Барселона" },
-            { username: "@tsavaaaa", club: "Атлетико Мадрид" },
-            { username: "@No_Name_KZ08", club: "Бавария" }
+            { username: "@MishaBurkoveckii", club: "Borussia Dortmund" },
+            { username: "@MehrabyanRaffi", club: "Barcelona" },
+            { username: "@tsavaaaa", club: "Atletico Madrid" },
+            { username: "@No_Name_KZ08", club: "Bayern Munich" }
         ],
 
         E: [
-            { username: "@finallygetaway", club: "Интер" },
-            { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
-            { username: "@Yeuwubs", club: "Базель" },
-            { username: "@Viteaqa", club: "Арсенал" }
+            { username: "@finallygetaway", club: "Inter Milan" },
+            { username: "@Liverpoolfc1892i", club: "Arsenal 2" },
+            { username: "@Yeuwubs", club: "Basel" },
+            { username: "@Viteaqa", club: "Arsenal" }
         ],
 
         F: [
-            { username: "@asvlss", club: "Манчестер Сити 2" },
-            { username: "@Andfoza", club: "Ливерпуль" },
-            { username: "@dimentiy19", club: "Реал Мадрид" },
-            { username: "@Vetal6h", club: "Милан" }
+            { username: "@asvlss", club: "Manchester City 2" },
+            { username: "@Andfoza", club: "Liverpool" },
+            { username: "@dimentiy19", club: "Real Madrid" },
+            { username: "@Vetal6h", club: "AC Milan" }
         ]
     },
 
@@ -197,8 +197,8 @@ window.ARS_DATA = {
         noteUk: "До 1/8 вийшли 1–2 місця всіх груп і 4 найактивніші треті місця. Два найменш активні треті місця вибули.",
         noteRu: "В 1/8 вышли 1–2 места всех групп и 4 самых активных третьих места. Два наименее активных третьих места выбыли.",
         eliminatedThirds: [
-            { seed: "3A", username: "@Lalitovv", club: "Боруссия Дортмунд 2", reason: "0 матчів" },
-            { seed: "3D", username: "@No_Name_KZ08", club: "Бавария", reason: "1 матч" }
+            { seed: "3A", username: "@Lalitovv", club: "Borussia Dortmund 2", reason: "0 матчів" },
+            { seed: "3D", username: "@No_Name_KZ08", club: "Bayern Munich", reason: "1 матч" }
         ],
         roundOf16: [
             { homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway", homeScore: null, awayScore: null },
