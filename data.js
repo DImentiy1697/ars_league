@@ -179,16 +179,16 @@ window.ARS_DATA = {
             { home: "@asvlss", away: "@Andfoza", homeScore: 1, awayScore: 0 },
             { home: "@asvlss", away: "@dimentiy19", homeScore: 3, awayScore: 2 },
             { home: "@asvlss", away: "@Vetal6h", homeScore: 1, awayScore: 1 },
-            { home: "@Andfoza", away: "@dimentiy19", homeScore: null, awayScore: null },
-            { home: "@Andfoza", away: "@Vetal6h", homeScore: null, awayScore: null },
-            { home: "@dimentiy19", away: "@Vetal6h", homeScore: null, awayScore: null },
+            { home: "@Andfoza", away: "@dimentiy19", homeScore: 4, awayScore: 1 },
+            { home: "@Andfoza", away: "@Vetal6h", homeScore: 3, awayScore: 0 },
+            { home: "@dimentiy19", away: "@Vetal6h", homeScore: 3, awayScore: 0 },
 
             { home: "@Andfoza", away: "@asvlss", homeScore: 3, awayScore: 0 },
             { home: "@dimentiy19", away: "@asvlss", homeScore: 3, awayScore: 0 },
             { home: "@Vetal6h", away: "@asvlss", homeScore: 0, awayScore: 2 },
             { home: "@dimentiy19", away: "@Andfoza", homeScore: 3, awayScore: 2 },
-            { home: "@Vetal6h", away: "@Andfoza", homeScore: null, awayScore: null },
-            { home: "@Vetal6h", away: "@dimentiy19", homeScore: null, awayScore: null }
+            { home: "@Vetal6h", away: "@Andfoza", homeScore: 0, awayScore: 3 },
+            { home: "@Vetal6h", away: "@dimentiy19", homeScore: 0, awayScore: 3 }
         ]
     },
 
