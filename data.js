@@ -179,7 +179,7 @@ window.ARS_DATA = {
             { home: "@asvlss", away: "@Andfoza", homeScore: 1, awayScore: 0 },
             { home: "@asvlss", away: "@dimentiy19", homeScore: 3, awayScore: 2 },
             { home: "@asvlss", away: "@Vetal6h", homeScore: 1, awayScore: 1 },
-            { home: "@Andfoza", away: "@dimentiy19", homeScore: 1, awayScore: 4 },
+            { home: "@Andfoza", away: "@dimentiy19", homeScore: 2, awayScore: 5 },
             { home: "@Andfoza", away: "@Vetal6h", homeScore: 3, awayScore: 0 },
             { home: "@dimentiy19", away: "@Vetal6h", homeScore: 3, awayScore: 0 },
 
