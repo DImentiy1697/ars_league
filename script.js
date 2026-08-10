@@ -218,11 +218,47 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join("");
     }
 
+
+
+    function renderPlayoffs() {
+        if (!data.playoffs || !Array.isArray(data.playoffs.roundOf16)) return;
+        const groupsSection = document.querySelector("#groups") || document.querySelector(".groups-section");
+        if (!groupsSection) return;
+        let section = document.querySelector("#playoffs");
+        if (!section) {
+            section = document.createElement("section");
+            section.id = "playoffs";
+            section.className = "playoffs-section section";
+            groupsSection.insertAdjacentElement("afterend", section);
+        }
+        const clubOf = (username) => {
+            const p = (data.participants || []).find(x => x.username === username);
+            return p ? p.club : username;
+        };
+        const cards = data.playoffs.roundOf16.map((m, i) => `
+            <div class="playoff-card">
+                <div class="playoff-match-no">MATCH ${i + 1}</div>
+                <div class="playoff-team"><span class="playoff-seed">${m.homeSeed}</span><b>${clubOf(m.home)}</b><small>${m.home}</small></div>
+                <div class="playoff-vs">VS</div>
+                <div class="playoff-team"><span class="playoff-seed">${m.awaySeed}</span><b>${clubOf(m.away)}</b><small>${m.away}</small></div>
+            </div>`).join("");
+        const eliminated = (data.playoffs.eliminatedThirds || []).map(x => `${x.seed} ${x.club} (${x.reason})`).join(" • ");
+        section.innerHTML = `
+            <div class="container">
+                <div class="section-kicker">PLAYOFFS</div>
+                <h2 class="section-title">${data.playoffs.stage || "1/8 ФІНАЛУ"}</h2>
+                <p class="playoff-note">${currentLang === "ru" ? data.playoffs.noteRu : data.playoffs.noteUk}</p>
+                <div class="playoff-grid">${cards}</div>
+                <div class="playoff-eliminated">OUT: ${eliminated}</div>
+            </div>`;
+    }
+
     function renderAll() {
         applyStaticTranslations();
         renderLeagueInfo();
         renderTournament();
         renderGroups();
+        renderPlayoffs();
         renderHistory();
         renderChampions();
     }
