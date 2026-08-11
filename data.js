@@ -206,13 +206,13 @@ window.ARS_DATA = {
               leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
 
             { code: "R16-3", homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 4, awayScore: 2 }, leg2: { homeScore: 1, awayScore: 2 } },
 
             { code: "R16-4", homeSeed: "1D", home: "@MehrabyanRaffi", awaySeed: "2E", away: "@Liverpoolfc1892i",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 1, awayScore: 1 } },
 
             { code: "R16-5", homeSeed: "1F", home: "@dimentiy19", awaySeed: "3C", away: "@terehjuve",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 1 } },
 
             { code: "R16-6", homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66",
               leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
@@ -221,7 +221,7 @@ window.ARS_DATA = {
               leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
 
             { code: "R16-8", homeSeed: "2A", home: "@shapus2", awaySeed: "3F", away: "@asvlss",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+              leg1: { homeScore: 1, awayScore: 4 }, leg2: { homeScore: 1, awayScore: 1 } }
         ],
 
         quarterfinals: [
