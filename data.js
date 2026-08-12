@@ -203,7 +203,7 @@ window.ARS_DATA = {
               leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
 
             { code: "R16-2", homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 5, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 3 } },
 
             { code: "R16-3", homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza",
               leg1: { homeScore: 4, awayScore: 2 }, leg2: { homeScore: 1, awayScore: 2 } },
