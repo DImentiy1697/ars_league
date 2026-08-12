@@ -200,7 +200,7 @@ window.ARS_DATA = {
 
         roundOf16: [
             { code: "R16-1", homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 3, awayScore: 0 } },
 
             { code: "R16-2", homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan",
               leg1: { homeScore: 5, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 3 } },
@@ -215,7 +215,7 @@ window.ARS_DATA = {
               leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 1 } },
 
             { code: "R16-6", homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+              leg1: { homeScore: 1, awayScore: 2 }, leg2: { homeScore: 2, awayScore: 2 } },
 
             { code: "R16-7", homeSeed: "2C", home: "@kentyxa26", awaySeed: "2D", away: "@MishaBurkoveckii",
               leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
