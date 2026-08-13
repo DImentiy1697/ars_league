@@ -9,13 +9,13 @@ window.ARS_DATA = {
         badge: "OFFICIAL EFOOTBALL LEAGUE",
         topTitle: "THE NEW ERA BEGINS",
         titleLines: ["PLAY.", "COMPETE.", "BECOME A LEGEND."],
-        currentStageEnglish: "PLAYOFFS • ROUND OF 16"
+        currentStageEnglish: "ROUND OF 16"
     },
 
     tournament: {
         name: "ARS CHAMPIONS LEAGUE",
         shortName: "ACL",
-        status: "playoffs",
+        status: "round_of_16",
         targetParticipants: 24,
         groupCount: 6,
         teamsPerGroup: 4,
@@ -24,73 +24,73 @@ window.ARS_DATA = {
     },
 
     participants: [
-        { username: "@dimentiy19", club: "Real Madrid" },
-        { username: "@Mbappe_501", club: "PSG" },
-        { username: "@MehrabyanRaffi", club: "Barcelona" },
-        { username: "@Vetal6h", club: "AC Milan" },
-        { username: "@kentyxa26", club: "Manchester United" },
-        { username: "@Viteaqa", club: "Arsenal" },
-        { username: "@Limbo_66", club: "Real Madrid 2" },
-        { username: "@FCSMilovereal", club: "PSG 2" },
-        { username: "@WondySale", club: "Manchester City" },
-        { username: "@asvlss", club: "Manchester City 2" },
-        { username: "@spakserega4", club: "Barcelona 2" },
-        { username: "@terehjuve", club: "Juventus" },
-        { username: "@shapus2", club: "Juventus 2" },
-        { username: "@MishaBurkoveckii", club: "Borussia Dortmund" },
-        { username: "@Lalitovv", club: "Borussia Dortmund 2" },
-        { username: "@No_Name_KZ08", club: "Bayern Munich" },
-        { username: "@Andfoza", club: "Liverpool" },
-        { username: "@Yeuwubs", club: "Basel" },
-        { username: "@Oraxan", club: "Liverpool 2" },
-        { username: "@tsavaaaa", club: "Atletico Madrid" },
-        { username: "@V_llaa_d", club: "Lille" },
-        { username: "@finallygetaway", club: "Inter Milan" },
-        { username: "@Liverpoolfc1892i", club: "Arsenal 2" },
-        { username: "@destrooooo12", club: "Bayern Munich 2" }
+        { username: "@dimentiy19", club: "Реал Мадрид" },
+        { username: "@Mbappe_501", club: "ПСЖ" },
+        { username: "@MehrabyanRaffi", club: "Барселона" },
+        { username: "@Vetal6h", club: "Милан" },
+        { username: "@kentyxa26", club: "МЮ" },
+        { username: "@Viteaqa", club: "Арсенал" },
+        { username: "@Limbo_66", club: "Реал Мадрид 2" },
+        { username: "@FCSMilovereal", club: "ПСЖ 2" },
+        { username: "@WondySale", club: "Манчестер Сити" },
+        { username: "@asvlss", club: "Манчестер Сити 2" },
+        { username: "@spakserega4", club: "Барселона 2" },
+        { username: "@terehjuve", club: "Ювентус" },
+        { username: "@shapus2", club: "Ювентус 2" },
+        { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
+        { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
+        { username: "@No_Name_KZ08", club: "Бавария" },
+        { username: "@Andfoza", club: "Ливерпуль" },
+        { username: "@Yeuwubs", club: "Базель" },
+        { username: "@Oraxan", club: "Ливерпуль 2" },
+        { username: "@tsavaaaa", club: "Атлетико Мадрид" },
+        { username: "@V_llaa_d", club: "Лилль" },
+        { username: "@finallygetaway", club: "Интер" },
+        { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
+        { username: "@destrooooo12", club: "Бавария 2" }
     ],
 
     groups: {
         A: [
-            { username: "@shapus2", club: "Juventus 2" },
-            { username: "@FCSMilovereal", club: "PSG 2" },
-            { username: "@Lalitovv", club: "Borussia Dortmund 2" },
-            { username: "@V_llaa_d", club: "Lille" }
+            { username: "@shapus2", club: "Ювентус 2" },
+            { username: "@FCSMilovereal", club: "ПСЖ 2" },
+            { username: "@Lalitovv", club: "Боруссия Дортмунд 2" },
+            { username: "@V_llaa_d", club: "Лилль" }
         ],
 
         B: [
-            { username: "@Mbappe_501", club: "PSG" },
-            { username: "@Limbo_66", club: "Real Madrid 2" },
-            { username: "@Oraxan", club: "Liverpool 2" },
-            { username: "@spakserega4", club: "Barcelona 2" }
+            { username: "@Mbappe_501", club: "ПСЖ" },
+            { username: "@Limbo_66", club: "Реал Мадрид 2" },
+            { username: "@Oraxan", club: "Ливерпуль 2" },
+            { username: "@spakserega4", club: "Барселона 2" }
         ],
 
         C: [
-            { username: "@WondySale", club: "Manchester City" },
-            { username: "@destrooooo12", club: "Bayern Munich 2" },
-            { username: "@kentyxa26", club: "Manchester United" },
-            { username: "@terehjuve", club: "Juventus" }
+            { username: "@WondySale", club: "Манчестер Сити" },
+            { username: "@destrooooo12", club: "Бавария 2" },
+            { username: "@kentyxa26", club: "МЮ" },
+            { username: "@terehjuve", club: "Ювентус" }
         ],
 
         D: [
-            { username: "@MishaBurkoveckii", club: "Borussia Dortmund" },
-            { username: "@MehrabyanRaffi", club: "Barcelona" },
-            { username: "@tsavaaaa", club: "Atletico Madrid" },
-            { username: "@No_Name_KZ08", club: "Bayern Munich" }
+            { username: "@MishaBurkoveckii", club: "Боруссия Дортмунд" },
+            { username: "@MehrabyanRaffi", club: "Барселона" },
+            { username: "@tsavaaaa", club: "Атлетико Мадрид" },
+            { username: "@No_Name_KZ08", club: "Бавария" }
         ],
 
         E: [
-            { username: "@finallygetaway", club: "Inter Milan" },
-            { username: "@Liverpoolfc1892i", club: "Arsenal 2" },
-            { username: "@Yeuwubs", club: "Basel" },
-            { username: "@Viteaqa", club: "Arsenal" }
+            { username: "@finallygetaway", club: "Интер" },
+            { username: "@Liverpoolfc1892i", club: "Арсенал 2" },
+            { username: "@Yeuwubs", club: "Базель" },
+            { username: "@Viteaqa", club: "Арсенал" }
         ],
 
         F: [
-            { username: "@asvlss", club: "Manchester City 2" },
-            { username: "@Andfoza", club: "Liverpool" },
-            { username: "@dimentiy19", club: "Real Madrid" },
-            { username: "@Vetal6h", club: "AC Milan" }
+            { username: "@asvlss", club: "Манчестер Сити 2" },
+            { username: "@Andfoza", club: "Ливерпуль" },
+            { username: "@dimentiy19", club: "Реал Мадрид" },
+            { username: "@Vetal6h", club: "Милан" }
         ]
     },
 
@@ -193,58 +193,36 @@ window.ARS_DATA = {
     },
 
     playoffs: {
-        stage: "ROUND OF 16",
+        stage: "QUARTERFINALS",
         format: "two_leg",
-        noteUk: "Кожна пара плей-оф грає два матчі. Переможець визначається за сумою двох матчів.",
+        noteUk: "Кожна пара плей-офф грає два матчі. Переможець визначається за сумою двох матчів.",
         noteRu: "Каждая пара плей-офф играет два матча. Победитель определяется по сумме двух матчей.",
 
         roundOf16: [
-            { code: "R16-1", homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway",
-              leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 3, awayScore: 0 } },
-
-            { code: "R16-2", homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan",
-              leg1: { homeScore: 5, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 3 } },
-
-            { code: "R16-3", homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza",
-              leg1: { homeScore: 4, awayScore: 2 }, leg2: { homeScore: 1, awayScore: 2 } },
-
-            { code: "R16-4", homeSeed: "1D", home: "@MehrabyanRaffi", awaySeed: "2E", away: "@Liverpoolfc1892i",
-              leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 1, awayScore: 1 } },
-
-            { code: "R16-5", homeSeed: "1F", home: "@dimentiy19", awaySeed: "3C", away: "@terehjuve",
-              leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 1 } },
-
-            { code: "R16-6", homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66",
-              leg1: { homeScore: 1, awayScore: 2 }, leg2: { homeScore: 2, awayScore: 2 } },
-
-            { code: "R16-7", homeSeed: "2C", home: "@kentyxa26", awaySeed: "2D", away: "@MishaBurkoveckii",
-              leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 1, awayScore: 1 } },
-
-            { code: "R16-8", homeSeed: "2A", home: "@shapus2", awaySeed: "3F", away: "@asvlss",
-              leg1: { homeScore: 1, awayScore: 4 }, leg2: { homeScore: 1, awayScore: 1 } }
+            { code: "R16-1", homeSeed: "1B", home: "@spakserega4", awaySeed: "3E", away: "@finallygetaway", leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 3, awayScore: 0 } },
+            { code: "R16-2", homeSeed: "1E", home: "@Viteaqa", awaySeed: "3B", away: "@Oraxan", leg1: { homeScore: 5, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 3 } },
+            { code: "R16-3", homeSeed: "1A", home: "@FCSMilovereal", awaySeed: "2F", away: "@Andfoza", leg1: { homeScore: 4, awayScore: 2 }, leg2: { homeScore: 1, awayScore: 2 } },
+            { code: "R16-4", homeSeed: "1D", home: "@MehrabyanRaffi", awaySeed: "2E", away: "@Liverpoolfc1892i", leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 1, awayScore: 1 } },
+            { code: "R16-5", homeSeed: "1F", home: "@dimentiy19", awaySeed: "3C", away: "@terehjuve", leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 1 } },
+            { code: "R16-6", homeSeed: "1C", home: "@WondySale", awaySeed: "2B", away: "@Limbo_66", leg1: { homeScore: 1, awayScore: 2 }, leg2: { homeScore: 2, awayScore: 2 } },
+            { code: "R16-7", homeSeed: "2C", home: "@kentyxa26", awaySeed: "2D", away: "@MishaBurkoveckii", leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 1, awayScore: 1 } },
+            { code: "R16-8", homeSeed: "2A", home: "@shapus2", awaySeed: "3F", away: "@asvlss", leg1: { homeScore: 1, awayScore: 4 }, leg2: { homeScore: 1, awayScore: 1 } }
         ],
 
         quarterfinals: [
-            { code: "QF-1", sourceHome: "Winner R16-1", sourceAway: "Winner R16-2",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-2", sourceHome: "Winner R16-3", sourceAway: "Winner R16-4",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-3", sourceHome: "Winner R16-5", sourceAway: "Winner R16-6",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-4", sourceHome: "Winner R16-7", sourceAway: "Winner R16-8",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+            { code: "QF-1", sourceHome: "Winner R16-1", sourceAway: "Winner R16-2", leg1: { homeScore: 1, awayScore: 3 }, leg2: { homeScore: 1, awayScore: 1 } },
+            { code: "QF-2", sourceHome: "Winner R16-3", sourceAway: "Winner R16-4", leg1: { homeScore: 3, awayScore: 2 }, leg2: { homeScore: 5, awayScore: 1 } },
+            { code: "QF-3", sourceHome: "Winner R16-5", sourceAway: "Winner R16-6", leg1: { homeScore: 1, awayScore: 2 }, leg2: { homeScore: 1, awayScore: 1 } },
+            { code: "QF-4", sourceHome: "Winner R16-7", sourceAway: "Winner R16-8", leg1: { homeScore: 4, awayScore: 2 }, leg2: { homeScore: 3, awayScore: 1 } }
         ],
 
         semifinals: [
-            { code: "SF-1", sourceHome: "Winner QF-1", sourceAway: "Winner QF-2",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "SF-2", sourceHome: "Winner QF-3", sourceAway: "Winner QF-4",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+            { code: "SF-1", sourceHome: "Winner QF-1", sourceAway: "Winner QF-2", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
+            { code: "SF-2", sourceHome: "Winner QF-3", sourceAway: "Winner QF-4", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
         ],
 
         final: [
-            { code: "FINAL", sourceHome: "Winner SF-1", sourceAway: "Winner SF-2",
-              leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+            { code: "FINAL", sourceHome: "Winner SF-1", sourceAway: "Winner SF-2", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
         ]
     },
 
