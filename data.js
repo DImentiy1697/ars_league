@@ -46,14 +46,14 @@ window.ARS_DATA = {
         noteUk: "Кожна пара плей-офф грає два матчі. Переможець визначається за сумою двох матчів.",
         noteRu: "Каждая пара плей-офф играет два матча. Победитель определяется по сумме двух матчей.",
         roundOf16: [
-            { code: "R16-1", home: "@MishaBurkoveckii", away: "@Kirill01007", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-2", home: "@elllyaplugg", away: "@MehrabyanRaffi", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-3", home: "@No_Name_KZ08", away: "@terehjuve", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-4", home: "@dimentiy19", away: "@Catto82", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-5", home: "@Kura0709", away: "@destrooooo12", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-6", home: "@Viteaqa", away: "@miin8am", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-7", home: "@Liverpoolfc1892i", away: "@oraxan", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "R16-8", home: "@FCSMilovereal", away: "@Yeuwubs", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+            { code: "R16-1", home: "@MishaBurkoveckii", away: "@Kirill01007", leg1: { homeScore: 3, awayScore: 1 }, leg2: { homeScore: 3, awayScore: 3 } },
+            { code: "R16-2", home: "@elllyaplugg", away: "@MehrabyanRaffi", leg1: { homeScore: 0, awayScore: 3 }, leg2: { homeScore: 0, awayScore: 3 } },
+            { code: "R16-3", home: "@No_Name_KZ08", away: "@terehjuve", leg1: { homeScore: 3, awayScore: 4 }, leg2: { homeScore: 2, awayScore: 4 } },
+            { code: "R16-4", home: "@dimentiy19", away: "@Catto82", leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 2, awayScore: 0 } },
+            { code: "R16-5", home: "@Kura0709", away: "@destrooooo12", leg1: { homeScore: 0, awayScore: 3 }, leg2: { homeScore: 0, awayScore: 3 } },
+            { code: "R16-6", home: "@Viteaqa", away: "@miin8am", leg1: { homeScore: 1, awayScore: 0 }, leg2: { homeScore: 1, awayScore: 1 } },
+            { code: "R16-7", home: "@Liverpoolfc1892i", away: "@oraxan", leg1: { homeScore: 2, awayScore: 1 }, leg2: { homeScore: 5, awayScore: 0 } },
+            { code: "R16-8", home: "@FCSMilovereal", away: "@Yeuwubs", leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 3, awayScore: 0 } }
         ],
         quarterfinals: [
             { code: "QF-1", sourceHome: "Winner R16-1", sourceAway: "Winner R16-2", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
