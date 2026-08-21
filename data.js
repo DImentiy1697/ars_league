@@ -8,12 +8,12 @@ window.ARS_DATA = {
         badge: "OFFICIAL EFOOTBALL LEAGUE",
         topTitle: "THE NEW ERA BEGINS",
         titleLines: ["PLAY.", "COMPETE.", "BECOME A LEGEND."],
-        currentStageEnglish: "ROUND OF 16"
+        currentStageEnglish: "QUARTERFINALS"
     },
     tournament: {
         name: "ARS PLAYOFF CUP",
         shortName: "APC",
-        status: "round_of_16",
+        status: "quarterfinals",
         targetParticipants: 16,
         groupCount: 0,
         teamsPerGroup: 0,
@@ -41,7 +41,7 @@ window.ARS_DATA = {
     groups: {},
     matches: {},
     playoffs: {
-        stage: "ROUND OF 16",
+        stage: "QUARTERFINALS",
         format: "two_leg",
         noteUk: "Кожна пара плей-офф грає два матчі. Переможець визначається за сумою двох матчів.",
         noteRu: "Каждая пара плей-офф играет два матча. Победитель определяется по сумме двух матчей.",
@@ -56,10 +56,10 @@ window.ARS_DATA = {
             { code: "R16-8", home: "@FCSMilovereal", away: "@Yeuwubs", leg1: { homeScore: 3, awayScore: 0 }, leg2: { homeScore: 3, awayScore: 0 } }
         ],
         quarterfinals: [
-            { code: "QF-1", sourceHome: "Winner R16-1", sourceAway: "Winner R16-2", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-2", sourceHome: "Winner R16-3", sourceAway: "Winner R16-4", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-3", sourceHome: "Winner R16-5", sourceAway: "Winner R16-6", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
-            { code: "QF-4", sourceHome: "Winner R16-7", sourceAway: "Winner R16-8", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } }
+            { code: "QF-1", home: "@FCSMilovereal", away: "@Liverpoolfc1892i", leg1: { homeScore: 1, awayScore: 2 }, leg2: { homeScore: 3, awayScore: 1 } },
+            { code: "QF-2", home: "@Viteaqa", away: "@destrooooo12", leg1: { homeScore: 3, awayScore: 3 }, leg2: { homeScore: 3, awayScore: 1 } },
+            { code: "QF-3", home: "@dimentiy19", away: "@terehjuve", leg1: { homeScore: 6, awayScore: 0 }, leg2: { homeScore: 5, awayScore: 2 } },
+            { code: "QF-4", home: "@MishaBurkoveckii", away: "@MehrabyanRaffi", leg1: { homeScore: 0, awayScore: 3 }, leg2: { homeScore: 1, awayScore: 2 } }
         ],
         semifinals: [
             { code: "SF-1", sourceHome: "Winner QF-1", sourceAway: "Winner QF-2", leg1: { homeScore: null, awayScore: null }, leg2: { homeScore: null, awayScore: null } },
